@@ -798,6 +798,7 @@ table {
   margin-bottom: 30px;
 }
 .intro__content {
+  height:  100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
