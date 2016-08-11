@@ -175,6 +175,7 @@ table {
 }
 .advantages__item:nth-child(3) .advantages__image:nth-child(2) {
   margin: -303px 0 0 152px;
+  z-index: -1
 }
 .advantages__item:nth-child(3) .advantages__image:nth-child(2) img {
   border: 6px solid #fff;
@@ -936,6 +937,7 @@ table {
   height: 100%;
   background-color: #000;
   z-index: -1;
+  transition: 300ms all ease-in;
 }
 .layout__cross {
   position: absolute;
@@ -970,9 +972,12 @@ table {
   background-size: cover;
 }
 .layout__background.-speakers {
-  background-color: #0a0a0e;
-  background-image: -webkit-radial-gradient(circle 863px at 74.27% 48.46%, rgba(74,139,184,0.16) 0%, rgba(2,0,4,0.16) 100%);
-  background-image: radial-gradient(circle 863px at 74.27% 48.46%, rgba(74,139,184,0.16) 0%, rgba(2,0,4,0.16) 100%);
+background-color:  #0a0a0e;
+background: -webkit-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+background: -moz-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+background: -o-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+background: -ms-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+background: radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
 }
 .layout__background.-speakers .layout__cross {
   bottom: 200px;
@@ -995,9 +1000,12 @@ table {
   margin-left: 324px;
 }
 .layout__background.-forwho {
-  background-color: #0a0a0e;
-  background-image: -webkit-radial-gradient(circle 861px at 74.27% 48.46%, rgba(74,139,184,0.16) 0%, rgba(2,0,4,0.16) 100%);
-  background-image: radial-gradient(circle 861px at 74.27% 48.46%, rgba(74,139,184,0.16) 0%, rgba(2,0,4,0.16) 100%);
+background-color:  #0a0a0e;
+background: -webkit-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+background: -moz-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+background: -o-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+background: -ms-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+background: radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
 }
 .layout__background.-advantages {
   background-color: #0a0a0e;
@@ -2381,3 +2389,12 @@ b {
 .wow {
   visibility:  hidden;
 }
+
+
+@media(min-width: 1500px) {
+  .tickets__content.layout__content {
+    max-width: 1500px;
+    min-width: 1280px;
+  }
+}
+
