@@ -1,0 +1,132 @@
+/*
+    Document   : css/mobile_menu.css
+    Created on : 2016-07-29 03:26 PM
+    Author     : ArtemZamuruev
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+.mobile__menu__icon{
+    display: none;
+}
+div.current__menu__indicator{
+    display: none;
+}
+
+
+@media ( max-width : 1024px ){
+    
+    
+    /* Mobile intro date position fix */
+    .header{
+        color: rgb(255, 255, 255);
+    }
+    .intro__day{
+        top: -100px;
+    }
+    
+    .intro__header,
+    .intro__label,
+    .intro__desc{
+        top: 0px; 
+    }
+    
+    .header__buy{
+        display: none;
+        right: 80px;
+        top: -10px;
+    }
+    /* End of the fix */
+    
+    /* Responsive form fix  */
+    .form{
+        display: block;
+    }
+    .form__item{
+        width: 200px;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .form__item:last-child{
+        text-align: center;
+    }
+    /* End of the fix */
+    
+    .layout__header div.menu{
+        opacity: 0;
+    }
+    
+    .layout__header{
+        height: 70px;
+    }
+    
+    .header.-js-inner{
+        padding: 0;
+    }
+    
+    .header__logo{
+        left: 20px;
+        top: -15px;
+    }
+    
+    .mobile__menu__icon{
+        display: block;
+        position: absolute;
+        font-size: 2em;
+        top: 15px;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        background-image: url("../content/hamburger-icon.png");
+        background-size: cover;
+    }
+    
+    .mobile__menu__icon a{
+        text-decoration: none;
+        color: #fffef7;
+    }
+    
+    .header.-js-inner,
+    .header.-js-inner .menu{
+        background-color: rgba(0,0,0, 0.85);
+        box-shadow: 2.5px 4.3px 90px rgba(1,1,1,.9);
+    }
+    
+    .layout__header .menu{
+        position : absolute;
+        width : 100%;
+        font-size: 1.7em;
+        right: 0px;
+        top: 70px;
+        padding: 20px;
+        width: 100%;
+        z-index: -10;
+    }
+    
+    .layout__header .header div.menu{
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 2px 4px 90px rgba(1, 1, 1, 0.9);
+    }
+    .layout__header .header.-js-inner div.menu{
+        width: 100%;
+    }
+    
+    .layout__header .menu__item{
+        display: block;
+        text-align: right;
+        margin-top: 50px;
+    }
+    
+    div.current__menu__indicator{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 100px;
+        border-bottom: 4px solid #e01acb;
+        color: #e01acb;
+        text-transform: uppercase;
+        text-align: right;
+    }
+}

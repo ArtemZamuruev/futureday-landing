@@ -1,0 +1,99 @@
+/*
+    Document   : css/speakers_slider.css
+    Created on : 2016-07-30 11:10 AM
+    Author     : ArtemZamuruev
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+.speakers__switcher{
+  height: auto;
+  width: auto;
+  font-size: 30pt;
+  position:relative;
+  top: 15%;
+  left: 37%;
+}
+
+.speakers__switcher div{
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-origin:content-box;
+    padding:3px;
+    height:70px;
+    width:75px;
+    display: inline-block;
+    float: left;
+    cursor: pointer;
+    box-sizing:border-box;
+    border: 1px solid #FFF;
+    opacity: 0.75;
+}
+
+.speakers__switcher div:hover{
+    opacity: 1;
+}
+div.right_switcher{
+    position: relative;
+    left: -1px;
+}
+
+div.speaker__item{
+    overflow: hidden;
+}
+
+div.speaker__item,
+div.speaker__desc.hiddenfix{
+    -webkit-transition-property: all;
+            transition-property: all;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+}
+
+div.speaker__item.-destroyed{
+    opacity: 0;
+}
+
+div.speaker__item.-destroyed:nth-child(1){
+    margin-right: 50px;
+}
+div.speaker__item.-destroyed:nth-child(2){
+    left: -150px;
+}
+div.speaker__item.-destroyed:nth-child(3){
+    left: 50px;
+}
+div.speaker__item.-destroyed:nth-child(4){
+    left: -10%;
+}
+div.speaker__item.-destroyed:nth-child(5){
+    left: 100%;
+}
+div.speaker__item.-destroyed:nth-child(6){
+    margin-right: -150px;
+}
+
+div.speaker__item:nth-child(2) div.speaker__image,
+div.speaker__item:nth-child(2) div.speaker__image{
+    -webkit-animation-delay: 0.2s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-delay: 0.2s;
+    -moz-animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+}
+
+div.speaker__desc.hiddenfix.-destroyed:{
+    left: 2000px!important;
+    opacity: 0;
+}
+
+div.speaker__desc.hiddenfix{
+    opacity: 0;
+    max-width: 150px;
+}

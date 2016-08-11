@@ -1,0 +1,116 @@
+/*
+    Document   : css/popup.css
+    Created on : 2016-08-01 11:23 PM
+    Author     : ArtemZamuruev
+    Description:
+    Purpose of the stylesheet follows.
+*/
+
+div.layout__header{
+    z-index: 20;
+}
+
+header.header.-js-inner{
+    box-shadow: none;
+}
+
+div.popup__layout,
+div.popup__content{
+    -webkit-transition-property: all;
+            transition-property: all;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+}
+
+div.popup__layout{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index:10;
+}
+
+div.popup__layout.-no-visible,
+div.popup__content.-no-visible{
+    display: none;
+    z-index: -99;
+}
+div.popup__layout.-visible,
+div.popup__content.-visible{
+    display: block;
+    z-index: 10;
+}
+
+
+div.popup__content.-visible{
+    position: fixed;
+    box-sizing: border-box;
+    width: 50%;
+    height: auto;
+    max-height: 80%;
+    top: 110px;
+    left: 25%;
+    background-color: #fff;
+    color: #000;
+    padding: 40px;
+    z-index: 15;
+}
+
+div.popup__container{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+div.popup__close__button{
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 3em;
+    box-sizing: content-box;
+    margin-left: 100%;
+    background-image: url("../content/close-window-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    
+}
+
+div.popup__speaker__photo{
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    float:left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+h1.popup__speaker__name{
+    font-size: 2em;
+    font-weight: 600;
+    padding-top: 10px;
+    font-family: kelson;
+    line-height: 1.2em;
+    text-transform: uppercase;
+}
+
+h3.popup__speaker__role{
+    font-weight: 600;
+    font-family: kelson;
+}
+
+p.popup__speaker__description {
+    margin-top: 20px;
+}
+
+@media (max-width : 1024px){
+    div.popup__content.-visible{
+        max-height: 1000%;
+    }
+}
