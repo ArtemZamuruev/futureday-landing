@@ -1,0 +1,25 @@
+/*
+    Document   : css/add_fixes.css
+    Created on : 2016-08-11 12:15 PM
+    Author     : ArtemZamuruev
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+div.layout__content--type_inner{
+    padding: 10px 60px;
+}
+div.forwho__menu{
+    height: 80%;
+}
+div.menu__item{
+    backface-visibility: hidden;
+}
+div.logo__content{
+    color: #fff;
+}
+div.shedule__header{
+    width: 50%;
+    margin: auto;
+}

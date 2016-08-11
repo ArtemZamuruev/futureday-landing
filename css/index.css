@@ -1142,7 +1142,8 @@ table {
   text-decoration: none;
 }
 .logo:hover .logo__line {
-  stroke: #e01acb;
+/*   stroke: #e01acb; */
+    stroke: #fff;
 }
 .logo__line {
   fill: none;
