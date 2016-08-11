@@ -7,8 +7,13 @@
 */
 
 $(document).ready(function(){
+
+    new WOW().init();
+
     scrollTo(0, $("body").height);
+
     setTimeout(function(){
+        
         $("div.layout__background.-intro").addClass("-js-active");
         $("div.intro__day").addClass("-sliced");
         setTimeout(function(){
@@ -24,7 +29,10 @@ $(document).ready(function(){
                         $(".layout__nav").addClass("-sliced");
                     }, 500);
                 }, 1000);
+
             }, 1000);
+
         }, 1000);
+
     }, 1000);
 });

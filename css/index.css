@@ -400,8 +400,11 @@ table {
 .contacts__item--type_name {
   color: #fff249;
 }
-.contacts__item--type_phone span {
+.contacts__item--type_phone span, 
+.contacts__item--type_phone a
+{
   color: #838383;
+  text-decoration:  none;
 }
 .contacts__item--type_mail a {
   color: #fff;
@@ -1559,6 +1562,7 @@ table {
   float: left;
   position: relative;
   z-index: 3;
+  cursor:  pointer;
   position: absolute;
 }
 
