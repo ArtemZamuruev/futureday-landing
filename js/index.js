@@ -5872,3 +5872,13 @@ var formSettings = {
 };
 $form.validate(formSettings);
 $("[name='contacts[phone]']").mask('8 000 000 00 00');
+
+
+// - Dmitry fixs
+
+$(document).ready(function(){
+    $(document).on("focus","input.error", function(){
+        $(this).removeClass("error");
+    });
+
+});

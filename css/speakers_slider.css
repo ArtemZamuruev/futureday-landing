@@ -29,6 +29,7 @@
     box-sizing:border-box;
     border: 1px solid #FFF;
     opacity: 0.75;
+    transition: 150ms all ease-out;
 }
 
 .speakers__switcher div:hover{
