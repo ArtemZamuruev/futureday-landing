@@ -288,7 +288,10 @@ table {
   width: 100%;
   left: 0;
 }
-.buy--state_active:after {
+
+.intro__buy.-faded:hover .buy.buy--size_big:after 
+
+{
   width: 100%;
   left: 0;
 }
@@ -298,6 +301,7 @@ table {
 .buy--size_big .buy__value {
   font-size: 24px;
   line-height: 32px;
+  z-index: 100;
 }
 @media (max-width: 768px) {
   .buy--size_big:after {
