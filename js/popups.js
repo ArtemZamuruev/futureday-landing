@@ -7,7 +7,7 @@
 */
 
 $("div.speaker__item").on("click", function(){
-    
+    $("body").addClass("overflow_hidden");
     $("div.popup__speaker__photo").css({"background-image": $("div.speaker__image",this).css("background-image")});
     $("h1.popup__speaker__name").text($("div.speaker__name", this).text());
     $("h3.popup__speaker__role").text($("div.speaker__role", this).text());
@@ -19,6 +19,11 @@ $("div.speaker__item").on("click", function(){
       setTimeout(function(){
          $("div.popup__container").height(800);
          $("div.popup__container").height($("div.popup__content").height()-70);
+         $(".popup__container").mCustomScrollbar({
+             axis:"y",
+             setHeight: $("div.popup__content").height()-70,
+             scrollbarPosition: "outside"
+         });
       }, 30);
 });
 
@@ -31,6 +36,7 @@ function hidePopup(){
     $("div.popup__content").removeClass("-visible");
     $("div.popup__layout").addClass("-no-visible");
     $("div.popup__content").addClass("-no-visible");
+    $("body").removeClass("overflow_hidden");
 //      $("div.popup__container").height(800);
 }
 

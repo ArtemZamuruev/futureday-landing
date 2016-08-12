@@ -6,6 +6,16 @@
     Purpose of the stylesheet follows.
 */
 
+body {
+    transition:  300ms all ease-in-out;
+}
+
+body.overflow_hidden {
+    overflow:  hidden;
+    padding-right: 17px;
+}
+
+
 div.layout__header{
     z-index: 20;
 }
@@ -61,15 +71,16 @@ div.popup__content.-visible{
 }
 
 div.popup__container{
-    overflow-y: scroll;
-    overflow-x: hidden;
+    position: relative;
 }
 
 div.popup__close__button{
     position: absolute;
     top: 5px;
+    cursor:  pointer;
     right: 30px;
     cursor: pointer;
+    opacity: 1;
     font-size: 3em;
     box-sizing: content-box;
     margin-left: 100%;
@@ -77,8 +88,16 @@ div.popup__close__button{
     background-repeat: no-repeat;
     background-size: contain;
     height: 30px;
-    width: 30px;
-    
+    width: 30px;   
+    transition: 1700ms all ease-in-out;
+}
+
+div.popup__close__button:hover {
+    -webkit-transform: rotate(405deg);
+    -moz-transform: rotate(405deg);
+    -o-transform: rotate(405deg);
+    transform: rotate(405deg);
+    opacity: 0.7;
 }
 
 div.popup__speaker__photo{
