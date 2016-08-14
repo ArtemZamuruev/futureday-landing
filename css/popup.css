@@ -66,7 +66,7 @@ div.popup__content.-visible{
     left: 25%;
     background-color: #f7f6f6;
     color: #000;
-    padding: 40px;
+    padding: 30px;
     padding-right: 20px;
     z-index: 15;
 }
@@ -77,7 +77,7 @@ div.popup__container{
 
 div.popup__close__button{
     position: absolute;
-    top: 45px;
+    top: 35px;
     z-index: 300;
     cursor: pointer;
     right: 14px;
