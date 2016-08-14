@@ -21,8 +21,7 @@ $("div.speaker__item").on("click", function(){
          $("div.popup__container").height($("div.popup__content").height()-70);
          $(".popup__container").mCustomScrollbar({
              axis:"y",
-             setHeight: $("div.popup__content").height()-70,
-             scrollbarPosition: "outside"
+             setHeight: $("div.popup__content").height()-70
          });
       }, 30);
 });
