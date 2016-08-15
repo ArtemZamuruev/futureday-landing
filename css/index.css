@@ -969,10 +969,12 @@ table {
           transition-property: all;
   -webkit-transition-duration: 1.2s;
           transition-duration: 1.2s;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 1, 0.66, 0.95);
-          transition-timing-function: cubic-bezier(0.4, 1, 0.66, 0.95);
+  /*-webkit-transition-timing-function: cubic-bezier(0.4, 1, 0.66, 0.95);
+          transition-timing-function: cubic-bezier(0.4, 1, 0.66, 0.95);*/
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
+
+  transition: 600ms all ease-in-out;
 }
 .layout__background.-js-active {
   opacity: 1;
@@ -984,12 +986,13 @@ table {
   background-size: cover;
 }
 .layout__background.-speakers {
-background-color:  #0a0a0e;
-background: -webkit-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-background: -moz-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-background: -o-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-background: -ms-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-background: radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+
+  background-color:  #0a0a0e;
+  background: -webkit-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -moz-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -o-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -ms-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
 }
 .layout__background.-speakers .layout__cross {
   bottom: 200px;
@@ -1012,12 +1015,12 @@ background: radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgb
   margin-left: 324px;
 }
 .layout__background.-forwho {
-background-color:  #0a0a0e;
-background: -webkit-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-background: -moz-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-background: -o-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-background: -ms-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-background: radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background-color:  #0a0a0e;
+  background: -webkit-radial-gradient(circle 833px at 50%, rgba(40, 54, 152, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -moz-radial-gradient(circle 833px at 50%, rgba(40, 54, 152, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -o-radial-gradient(circle 833px at 50%, rgba(40, 54, 152, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -ms-radial-gradient(circle 833px at 50%, rgba(40, 54, 152, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: radial-gradient(circle 833px at 50%, rgba(40, 54, 152, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
 }
 .layout__background.-advantages {
   background-color: #0a0a0e;
@@ -2402,6 +2405,10 @@ b {
   visibility:  hidden;
 }
 
+
+.forwho__text {
+  max-width:  550px;
+}
 
 @media(min-width: 1500px) {
   .tickets__content.layout__content {

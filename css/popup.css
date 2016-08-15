@@ -64,9 +64,10 @@ div.popup__content.-visible{
     max-height: 80%;
     top: 110px;
     left: 25%;
-    background-color: #fff;
+    background-color: #f7f6f6;
     color: #000;
-    padding: 40px;
+    padding: 30px;
+    padding-right: 20px;
     z-index: 15;
 }
 
@@ -76,9 +77,10 @@ div.popup__container{
 
 div.popup__close__button{
     position: absolute;
-    top: 5px;
-    cursor:  pointer;
-    right: 30px;
+    top: 35px;
+    z-index: 300;
+    cursor: pointer;
+    right: 14px;
     cursor: pointer;
     opacity: 1;
     font-size: 3em;
@@ -127,6 +129,36 @@ h3.popup__speaker__role{
 p.popup__speaker__description {
     margin-top: 20px;
 }
+
+
+
+
+
+.mCSB_scrollTools .mCSB_draggerRail {
+    background:  transparent;
+}
+
+.mCSB_scrollTools .mCSB_dragger{
+    padding-top: 50px;
+}
+
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+    border-radius: 1px;
+    background-color:  rgba(5, 5, 8, 0.1);
+    width: 11px;
+    height: 268px;
+}
+
+
+
+
+
+
+
 
 @media (max-width : 1024px){
     div.popup__content.-visible{
