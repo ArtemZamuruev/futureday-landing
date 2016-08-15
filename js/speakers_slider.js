@@ -30,29 +30,8 @@ $(document).ready(function(){
          }
      timerId = setTimeout(tick, 15000);
      }, 15000);
-//      placeAdditionalSpeakerDesc(); 
 });
 
-$(window).resize(function(){
-//     placeAdditionalSpeakerDesc();
-});
-
-function placeAdditionalSpeakerDesc(){
-    var $item = $("div.speaker__item:nth-child(5)"),
-        itemTop = parseInt($item.css("top")),
-        itemLeft = parseInt($item.css("left"));
-    var itemHeight = parseInt($item.height());
-    var itemWidth = parseInt($item.width());
-    var itemMarLeft = parseInt($item.css("margin-left"));
-    var itemMarTop = parseInt($item.css("margin-top"));
-    $("div.speaker__desc.hiddenfix").css({
-        "position" : "absolute",
-        "top" : itemTop+itemMarTop+itemHeight/2-10,
-        "left": itemLeft+itemMarLeft+itemWidth+24,
-        "opacity" : "1"
-    });
-        
-}
 
 const ANIMATION_DELAY = 500;
 
@@ -72,12 +51,10 @@ $(document).on("scroll", function(){
         $speakerItems.each(function(){
             $(this).removeClass("-destroyed");
         });
-        $("div.speaker__desc.hiddenfix").removeClass("-destroyed");
     }
     else{
         $speakerItems.each(function(){
             $(this).addClass("-destroyed");
-            $("div.speaker__desc.hiddenfix").addClass("-destroyed");
         });
     }
 });
