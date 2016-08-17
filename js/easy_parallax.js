@@ -17,15 +17,19 @@ var currentCursorCords = {
 $(document).on("mousemove", function(event){
     
     if (prevCursorCords.x == 0 && prevCursorCords.y == 0){
-        prevCursorCords.x = event.pageX;
-        prevCursorCords.y = event.pageY;
+        prevCursorCords.x = event.clientX;
+        prevCursorCords.y = event.clientY;
     }
     
-    currentCursorCords.x = event.pageX;
-    currentCursorCords.y = event.pageY;
+    currentCursorCords.x = event.clientX;
+    currentCursorCords.y = event.clientY;
     
-    var shiftTop = parseFloat((currentCursorCords.y - prevCursorCords.y)/-125);
-    var shiftLeft = parseFloat((currentCursorCords.x - prevCursorCords.x)/-125);
+    var shiftTop = parseFloat((currentCursorCords.y - prevCursorCords.y)/-175);
+    var shiftLeft = parseFloat((currentCursorCords.x - prevCursorCords.x)/-175);
+    
+    if(Math.abs(shiftTop) > 5 || Math.abs(shiftLeft) > 5){
+        return;
+    }
     
     var $icons = $("div.shedule__icon-back");
     
@@ -36,13 +40,7 @@ $(document).on("mousemove", function(event){
         });
     });
     
-
-    //console.log("clientX="+event.clientX+"; clientY="+event.clientY);
-    //console.log("shiftTop="+shiftTop+"; shiftLeft="+shiftLeft);
+    prevCursorCords.x = event.clientX;
+    prevCursorCords.y = event.clientY;
     
-    prevCursorCords.x = event.pageX;
-    prevCursorCords.y = event.pageY;
-    
-    //console.log("Offset: top="+$($testItem).offset().top+"; left="+$($testItem).offset().left);
-    //console.log("Position: top="+$($testItem).position().top+"; left="+$($testItem).position().left);
 });

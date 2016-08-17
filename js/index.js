@@ -5816,7 +5816,7 @@ $items.on('click', function(evt) {
 
 var prevTarget = "";
 
-$(window).on('scrollend', function() {
+$(window).on('scroll', function() {
     var currentTop = $(this).scrollTop(),
         $blocks = $(".layout__item"),
         windowHeight = $(window).height();
@@ -5832,13 +5832,6 @@ $(window).on('scrollend', function() {
             nextBG.addClass("-js-active");
             $active.removeClass('-js-selected');
             $item.addClass('-js-selected');
-            
-            
-            
-            if(target === "speakers" && target != prevTarget){
-                //console.log("Bingo!!!");
-                //console.log("Target: "+target+"; prevTarget: "+prevTarget);
-            }
             
             
             
