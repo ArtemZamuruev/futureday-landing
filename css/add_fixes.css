@@ -24,6 +24,11 @@ div.shedule__header{
     margin: auto;
 }
 
-.speaker__image {
-    
+
+
+
+/*Правка 22 по второму пакету правок */
+
+div.tickets__layout{
+    margin-top: 50px;
 }

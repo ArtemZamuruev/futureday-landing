@@ -5822,7 +5822,7 @@ $(window).on('scroll', function() {
         windowHeight = $(window).height();
     $blocks.each(function() {
 //         if ($(this).offset().top - $(this).height() / 2 <= currentTop && $(this).offset().top + $(this).height() > currentTop) {
-        if (currentTop+windowHeight*0.7 >= $(this).offset().top && currentTop+windowHeight*0.3 <= $(this).offset().top+$(this).height()){
+        if (currentTop+windowHeight*0.3 >= $(this).offset().top && currentTop+windowHeight*0.7 <= $(this).offset().top+$(this).height()){
             var target = $(this).find('a[name]').attr('name'),
                 $item = $('a[href="#' + target + '"]'),
                 $active = $(".-js-selected");

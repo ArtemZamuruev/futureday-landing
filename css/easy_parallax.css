@@ -1,0 +1,14 @@
+/*
+    Document   : css/easy_parallax.css
+    Created on : 2016-08-18 02:24 PM
+    Author     : ArtemZamuruev
+    Description:
+    Purpose of the stylesheet follows.
+*/
+
+div.shedule__icon-wrap:nth-child(2) div.shedule__icon-back{
+    left:47%:
+}
+div.shedule__icon-wrap:nth-child(3) div.shedule__icon-back{
+    left:47%;
+}
