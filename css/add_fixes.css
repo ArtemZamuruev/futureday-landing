@@ -32,3 +32,15 @@ div.shedule__header{
 div.tickets__layout{
     margin-top: 50px;
 }
+
+/* Правка 26 */
+
+div.layout__footer{
+    height: 60px;
+}
+div.layout__footer div.footer__content{
+    align-items: initial;
+}
+
+/* Правка 24 */
+
