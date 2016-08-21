@@ -36,10 +36,4 @@ function hidePopup(){
     $("div.popup__layout").addClass("-no-visible");
     $("div.popup__content").addClass("-no-visible");
     $("body").removeClass("overflow_hidden");
-//      $("div.popup__container").height(800);
 }
-
-$(window).on("resize", function(){
-//     $("div.popup__container").height(800);
-//     $("div.popup__container").height($("div.popup__content").height()-70);    
-});

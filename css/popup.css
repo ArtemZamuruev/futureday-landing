@@ -7,7 +7,7 @@
 */
 
 body {
-    transition:  300ms all ease-in-out;
+    transition: 300ms all ease-in-out;
 }
 
 body.overflow_hidden {
@@ -133,6 +133,7 @@ p.popup__speaker__description {
 
 
 
+/* Правки со скроллом на попапе */
 
 .mCSB_scrollTools .mCSB_draggerRail {
     background:  transparent;
@@ -154,7 +155,7 @@ p.popup__speaker__description {
 }
 
 
-
+/* Конец правок со скроллом */
 
 
 

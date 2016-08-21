@@ -24,23 +24,67 @@ div.shedule__header{
     margin: auto;
 }
 
-
-
-
 /*Правка 22 по второму пакету правок */
-
 div.tickets__layout{
     margin-top: 50px;
 }
+/*Конец*/
 
 /* Правка 26 */
-
 div.layout__footer{
     height: 60px;
 }
 div.layout__footer div.footer__content{
     align-items: initial;
 }
+/*Конец*/
 
 /* Правка 24 */
+div.tickets{
+    padding: 80px 0 20px;
+}
+/*Конец*/
 
+/*Правка 19*/
+div.shedule{
+    padding-top: 100px;
+}
+/*Конец*/
+
+/*Правка 15 */
+div.advantages__items{
+    margin-top: 0px;
+}
+div.advantages__container{
+    padding-top: 0px;
+}
+div.forwho{
+    margin-bottom: 0px;
+}
+div.forwho__content{
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+div.forwho__wrap{
+    margin-top: 0px;
+}
+div.speakers__layout{
+    padding-bottom: 0px;
+}
+div.forwho__main{
+    height:60%;
+}
+div.forwho__menu{
+    height: 60%;
+}
+div.forwho__content{
+    height: 500px;
+}
+/*Конец*/
+
+/* Правка 16.1 */
+div.forwho__icon{
+    opacity: 1;
+    width: 250px;
+}
+/* Конец */

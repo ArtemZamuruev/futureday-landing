@@ -88,13 +88,3 @@ div.speaker__item:nth-child(2) div.speaker__image{
     animation-delay: 0.2s;
     animation-duration: 1s;
 }
-
-div.speaker__desc.hiddenfix.-destroyed:{
-    left: 2000px!important;
-    opacity: 0;
-}
-
-div.speaker__desc.hiddenfix{
-    opacity: 0;
-    max-width: 150px;
-}

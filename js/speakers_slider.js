@@ -47,7 +47,7 @@ $(document).on("scroll", function(){
         windowHeight = $(window).height(),
         $speakersBlock = $($blocks[1]),
         $speakerItems = $("div.speaker__item");
-    if (currentTop+windowHeight*0.6 >= $speakersBlock.offset().top && currentTop+windowHeight*0.4 <= $speakersBlock.offset().top+$speakersBlock.height()){
+    if (currentTop+windowHeight*0.5 >= $speakersBlock.offset().top && currentTop+windowHeight*0.5 <= $speakersBlock.offset().top+$speakersBlock.height()){
         $speakerItems.each(function(){
             $(this).removeClass("-destroyed");
         });

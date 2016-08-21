@@ -5716,6 +5716,18 @@ $.extend($.validator.messages, {
 var $forWho_items = $(".forwho__menu-item");
 var transitionEnd = 'webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd';
 $forWho_items.on('click', function() {
+    
+    //  --------------
+    //  Правка 17   |
+    //  --------------
+    //  Предотвращаем срабатывание слайдера по нажатию 
+    //  на элемент, который уже и так активен
+    //  
+    if($(this).hasClass("-js-active")){
+        return;
+    }
+    //Конец
+    
     var $this = $(this),
         $active = $(".-js-active[data-slider-target]"),
         $currentSlide = $(".forwho__main-item.-js-active"),
@@ -5820,8 +5832,7 @@ $(window).on('scroll', function() {
     var currentTop = $(this).scrollTop(),
         $blocks = $(".layout__item"),
         windowHeight = $(window).height();
-    $blocks.each(function() {
-//         if ($(this).offset().top - $(this).height() / 2 <= currentTop && $(this).offset().top + $(this).height() > currentTop) {
+    $blocks.each(function() { 
         if (currentTop+windowHeight*0.3 >= $(this).offset().top && currentTop+windowHeight*0.7 <= $(this).offset().top+$(this).height()){
             var target = $(this).find('a[name]').attr('name'),
                 $item = $('a[href="#' + target + '"]'),
@@ -5832,28 +5843,31 @@ $(window).on('scroll', function() {
             nextBG.addClass("-js-active");
             $active.removeClass('-js-selected');
             $item.addClass('-js-selected');
-            
-            
-            
+
             prevTarget = target;
-                       
-            /* Archie mobile menu indication */
-            var $currentSelectedItemText = $(".menu__link.-js-selected").text();
-            var $menuIndicator = $("div.current__menu__indicator");
-            if($menuIndicator.text() != $currentSelectedItemText){
-                //console.log("currentSelectedItemText = "+$currentSelectedItemText+"; menuIndicatorText: "+$menuIndicator.text());
-                $menuIndicator.removeClass("fadeIn");
-                $menuIndicator.addClass("fadeOut");
-                setTimeout(function(){
-                    $menuIndicator.text($currentSelectedItemText);
-                    $menuIndicator.removeClass("fadeOut");
-                    $menuIndicator.addClass("fadeIn");
-                }, 100);
-            }
-            /* End */
+            
+            mobileMenuIndication();
         }
     });
 });
+
+
+function mobileMenuIndication(){
+    /* Archie mobile menu indication */
+    var $currentSelectedItemText = $(".menu__link.-js-selected").text();
+    var $menuIndicator = $("div.current__menu__indicator");
+    if($menuIndicator.text() != $currentSelectedItemText){
+        $menuIndicator.removeClass("fadeIn");
+        $menuIndicator.addClass("fadeOut");
+        setTimeout(function(){
+            $menuIndicator.text($currentSelectedItemText);
+            $menuIndicator.removeClass("fadeOut");
+            $menuIndicator.addClass("fadeIn");
+        }, 100);
+    }
+    /* End */
+}
+
 var $form = $("form.form");
 var formSettings = {
     submitHandler: function submitHandler(form) {
