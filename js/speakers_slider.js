@@ -41,24 +41,6 @@ const OUT_ANIMATION = "slideOut";
 const TEXT_OUT_ANIMATION = "fadeOut";
 const TEXT_IN_ANIMATION = "fadeIn";
 
-$(document).on("scroll", function(){
-    var currentTop = $(this).scrollTop(),
-        $blocks = $(".layout__item"),
-        windowHeight = $(window).height(),
-        $speakersBlock = $($blocks[1]),
-        $speakerItems = $("div.speaker__item");
-    if (currentTop+windowHeight*0.5 >= $speakersBlock.offset().top && currentTop+windowHeight*0.5 <= $speakersBlock.offset().top+$speakersBlock.height()){
-        $speakerItems.each(function(){
-            $(this).removeClass("-destroyed");
-        });
-    }
-    else{
-        $speakerItems.each(function(){
-            $(this).addClass("-destroyed");
-        });
-    }
-});
-
 var ItemBuffer = {
     imagesrc : "",
     name: "",
@@ -66,18 +48,15 @@ var ItemBuffer = {
 };
 
 function turnLeft(){  
-    
     var $speaker_items = $("div.speaker__item");
     var numOfItems = $speaker_items.length;
     var firstItem = $speaker_items[0];
-    
     copyPropertiesToBuffer(firstItem, ItemBuffer);    
     for(var i = 1; i < numOfItems; i++){
         var currentItem = $speaker_items[i];
         var prevItem = $speaker_items[i-1];    
         setPropertiesToCard(currentItem, prevItem, "Left");
     }
-    
     setPropertiesFromBuffer($speaker_items[numOfItems-1], ItemBuffer, "Left");
 }
 
