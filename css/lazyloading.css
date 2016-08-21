@@ -1,0 +1,94 @@
+/*
+    Document   : css/lazyloading.css
+    Created on : 2016-08-21 02:04 PM
+    Author     : ArtemZamuruev
+    Description:
+
+*/
+
+
+/*---------------------------------------
+ * Анимация элементов на ГЛАВНОЙ      |
+ * --------------------------------------
+ * 
+ */
+
+
+/*---------------------------------------
+ * Анимация секции ЧТО ВЫ ПОЛУЧИТЕ    |
+ * --------------------------------------
+ * Когда секция находится за пределами вьюпорта, 
+ * то каждому блоку с классом advantages__item 
+ * добавляется класс -destroyed, описывающший 
+ * "разобраннное" состояние
+ */
+div.advantages__item:nth-child(1){
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    transition-property: all;
+    
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    
+    -webkit-transition-duration: 2s;
+    -moz-transition-duration: 2s;
+    transition-duration: 2s;
+    
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+div.advantages__item:nth-child(2){
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    transition-property: all;
+    
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    
+    -webkit-transition-duration: 1.7s;
+    -moz-transition-duration: 1.7s;
+    transition-duration: 1.7s;
+    
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+div.advantages__item:nth-child(3){
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    transition-property: all;
+    
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    
+    -webkit-transition-duration: 1.3s;
+    -moz-transition-duration: 1.3s;
+    transition-duration: 1.3s;
+    
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+div.advantages__item{
+    opacity: 1;
+}
+div.advantages__item.-destroyed{
+    opacity: 0;
+}
+
+div.advantages__item.-destroyed:nth-child(1){
+    margin-left:-500px
+}
+div.advantages__item.-destroyed:nth-child(2){
+    margin-left: -400px;
+}
+div.advantages__item.-destroyed:nth-child(3){
+    right: -500px;
+}
+/* Конец анимации ЧТО ВЫ ПОЛУЧИТЕ */
+
