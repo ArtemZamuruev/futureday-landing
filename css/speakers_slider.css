@@ -44,8 +44,7 @@ div.speaker__item{
     overflow: hidden;
 }
 
-div.speaker__item,
-div.speaker__desc.hiddenfix{
+div.speaker__item{
     -webkit-transition-property: all;
             transition-property: all;
     -webkit-transition-timing-function: ease-out;
