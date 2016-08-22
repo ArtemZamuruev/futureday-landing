@@ -887,15 +887,18 @@ table {
 
 .intro__day {
   position: absolute;
-  right: 140%;
+  right: 180%;
   top: 0;
     
   -webkit-transition-property: all;
+     -moz-transition-property: all;
           transition-property: all;
   -webkit-transition-duration: 1.2s;
+     -moz-transition-duration: 1.2s;
           transition-duration: 1.2s;
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
+  -webkit-transition-delay: .2s;
+     -moz-transition-delay: .2s;
+          transition-delay: .2s;
 }
 
 .intro__day.-sliced{
