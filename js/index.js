@@ -5741,13 +5741,6 @@ $forWho_items.on('click', function() {
     $this.addClass('-js-active');
     $target.addClass('-js-active');
 });
-$(window).on('scroll', function() {
-    if ($(this).scrollTop() > 0) {
-        $(".header").addClass('-js-inner');
-    } else {
-        $(".header").removeClass('-js-inner');
-    }
-});
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
         var layout = document.querySelector(".layout");
