@@ -10,9 +10,6 @@
 div.layout__content--type_inner{
     padding: 10px 60px;
 }
-div.forwho__menu{
-    height: 80%;
-}
 div.menu__item{
     backface-visibility: hidden;
 }
@@ -24,11 +21,15 @@ div.shedule__header{
     margin: auto;
 }
 
-/*Правка 22 по второму пакету правок */
+div.forwho__main-item > div.forwho__icon{
+    width: 280px;
+}
+
+
+/* Правка 22 */
 div.tickets__layout{
     margin-top: 50px;
 }
-/*Конец*/
 
 /* Правка 26 */
 div.layout__footer{
@@ -37,19 +38,16 @@ div.layout__footer{
 div.layout__footer div.footer__content{
     align-items: initial;
 }
-/*Конец*/
 
 /* Правка 24 */
 div.tickets{
     padding: 80px 0 20px;
 }
-/*Конец*/
 
 /*Правка 19*/
 div.shedule{
     padding-top: 100px;
 }
-/*Конец*/
 
 /*Правка 15 */
 div.advantages__items{
@@ -72,19 +70,56 @@ div.speakers__layout{
     padding-bottom: 0px;
 }
 div.forwho__main{
-    height:60%;
+    height:100%;
 }
 div.forwho__menu{
-    height: 60%;
+    height: 100%;
 }
 div.forwho__content{
-    height: 500px;
+    height: 550px;
 }
-/*Конец*/
 
 /* Правка 16.1 */
 div.forwho__icon{
     opacity: 1;
     width: 250px;
 }
-/* Конец */
+
+/* Правка 5 */
+div.buy{
+    padding-bottom: 0px;
+}
+
+/* Правка 27 */
+div.tickets{
+    padding-bottom: 0px;
+}
+div.tickets__content{
+    padding-bottom: 0px;
+}
+
+/* Правка 28 */
+div.advantages__item:nth-child(1) .advantages__image:nth-child(2):before{
+    left: -8px;
+}
+div.advantages__item:nth-child(3) .advantages__image:nth-child(1):before{
+    left: -8px;
+    top: -8px;
+}
+
+/* Правка 29 */
+div.forwho__main-item:nth-child(1) div.forwho__icon{
+    
+}
+div.forwho__main-item:nth-child(2) div.forwho__icon{
+    
+}
+div.forwho__main-item:nth-child(3) div.forwho__icon{
+    
+}
+div.forwho__main-item:nth-child(4) div.forwho__icon{
+    
+}
+div.forwho__main-item:nth-child(5) div.forwho__icon{
+    
+}
