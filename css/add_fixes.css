@@ -137,7 +137,13 @@ div.forwho__main-item:nth-child(5) div.forwho__icon{
 }
 
 
-/* Тест */
+/* Правка 7 */
+/* TODO 
+ * Порефакторить анимацию элементов на главной
+ * вынести в файлы lazyloading
+ * вместо добавления классов сделать удаление классов
+ * удалить мусор из index.css
+ */
 
 h1.intro__header,
 div.intro__label,
@@ -149,3 +155,30 @@ div.intro__label.-sliced,
 p.intro__desc.-sliced{
     opacity: 1;
 }
+
+
+/* Правка 8 */
+div.intro__content{
+    padding-left:80px;
+}
+h1.intro__header.-sliced{
+    left: -3px;
+}
+
+/* Правка 3 */
+div.layout__item > a{
+    position: relative;
+}
+ div.layout__item:nth-child(2) > a{
+    top: -70px;
+}
+div.layout__item:nth-child(4) > a{
+    top: -120px;
+}
+div.layout__item:nth-child(5) > a{
+    top: -70px;
+}
+div.layout__item:nth-child(8) > a{
+    top: -60px;
+}
+
