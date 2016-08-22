@@ -57,7 +57,7 @@ function itemsBuild(itemsSelector){
  */
 $(document).ready(function(){
 
- new WOW().init();
+//  new WOW().init();
 
     scrollTo(0, $("body").height);
 
