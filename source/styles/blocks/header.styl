@@ -1,0 +1,70 @@
+.header
+	height 100%
+	color #707079
+	background-color: transparent
+	box-shadow: 2px 4px 90px rgba(1,1,1, 0)
+	transition-property: all
+	transition-duration: t-dur
+	transition-timing-function: t-bezier
+
+	&.-js-inner
+		background-color: rgba(0,0,0,.4)
+		box-shadow 2.5px 4.3px 90px rgba(1, 1, 1, .75)
+		color #fff
+
+		.logo__line
+			stroke #828282
+
+		.header__buy
+			opacity 1
+
+		.menu__link
+			&:hover
+				color #828282
+
+	&__logo
+		height 100%
+		position absolute
+		top 0
+		left 50px
+		display flex
+		align-items center
+
+	&__content
+		display flex
+		position relative
+		height 100%
+		align-items center
+		justify-content center
+		max-width 1600px
+		margin 0 auto
+		padding 50px
+		box-sizing border-box
+
+	&__buy
+		position absolute
+		right 50px
+		top 0
+		height 100%
+		display flex
+		align-items center
+		opacity 0
+		transition-property: all
+		transition-duration: t-dur
+		transition-timing-function: t-bezier
+
+	@media (max-width r-mobile)
+		padding-top 37px
+
+		&.-js-inner
+			padding-top 0
+
+			.logo__image svg
+				width 53px
+				height 49px
+
+		&__logo
+			left 52px
+
+		&__buy
+			display none

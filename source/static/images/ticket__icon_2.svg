@@ -1,0 +1,9 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139 149">
+	<title>ticket__icon_2</title>
+	<polygon points="88.33 1 1 52.33 38 80.33 88.33 1" style="fill:none;stroke-linejoin:round;stroke-width:2px"/>
+	<polygon points="88.33 1 38 80.33 51 148 138 97.33 88.33 1" style="fill:none;stroke-linejoin:round;stroke-width:2px"/>
+	<line x1="138" y1="97.33" x2="38" y2="80.33" style="fill:none;stroke-linejoin:round;stroke-width:2px"/>
+	<line x1="1" y1="52.33" x2="51" y2="148" style="fill:none;stroke-linejoin:round;stroke-width:2px"/>
+	<polyline points="1 52.33 99.67 69 136.65 97.1" style="fill:none;stroke-linejoin:round;stroke-width:0.25px;stroke-dasharray:4"/>
+	<polyline points="88.33 1 99.67 69 51 148" style="fill:none;stroke-linejoin:round;stroke-width:0.25px;stroke-dasharray:4"/>
+</svg>

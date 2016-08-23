@@ -1,0 +1,155 @@
+.layout
+	&__backgrounds
+		position fixed
+		top 0
+		left 0
+		width 100%
+		height 100%
+		background-color #000
+		z-index -1
+
+	&__cross
+		position absolute
+		width 13px
+		height 13px
+		background-image url('../images/cross-back.png')
+		background-size: 13px 13px
+
+	&__background
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		opacity 0
+		transition-property: all
+		transition-duration: t-dur
+		transition-timing-function: t-bezier
+		transition-delay .25s
+
+		&.-js-active
+			opacity 1
+
+		&.-intro
+			background-image url('../images/back_1.jpg')
+			background-position center center
+			background-repeat no-repeat
+			background-size cover
+
+		&.-speakers
+			background-color #0a0a0e
+			background-image radial-gradient(circle 863px at 74.27% 48.46%, rgba(74, 139, 184, 0.16) 0%, rgba(2, 0, 4, 0.16) 100%)
+
+			.layout__cross
+				bottom 200px
+
+				&.-lft
+					left 202px
+
+				&.-rt
+					right 202px
+
+			&:before
+				content ""
+				position absolute
+				width 189px
+				height 203px
+				top 50%
+				left 50%
+				background-image: url('../images/speakers-cobe.png')
+				background-size: 189px 203px
+				margin-left 324px
+
+		&.-forwho
+			background-color #0a0a0e
+			background-image radial-gradient(circle 861px at 74.27% 48.46%, rgba(74, 139, 184, 0.16) 0%, rgba(2, 0, 4, 0.16) 100%)
+
+		&.-advantages
+			background-color #0a0a0e
+			background-image radial-gradient(circle 861px at 74.27% 48.46%, rgba(65, 73, 80, 0.58) 0%, rgba(2, 0, 4, 0.58) 100%)
+
+		&.-shedule
+			background-color #0a0a0e
+			background-image radial-gradient(circle 1234px at 75.08% 30.2%, rgba(80, 70, 65, 0.58) 0%, rgba(2, 0, 4, 0.58) 100%)
+
+		&.-tickets
+			background-color #0a0a0e
+			background-image radial-gradient(circle 861px at 74.27% 48.46%, rgba(65, 73, 80, 0.58) 0%, rgba(2, 0, 4, 0.58) 100%)
+
+		&.-place
+			background-color: #000
+
+		&.-contacts
+			background-color black
+			background-image radial-gradient(circle 879px at 74.27% 48.46%, rgba(65, 73, 80, 0.58) 0%, rgba(2, 0, 4, 0.58) 100%)
+
+			&:before
+				content ""
+				position absolute
+				background-image: url('../images/contacts-cobe.png')
+				background-size: 643px 587px
+				width 643px
+				height 587px
+				left 50%
+				bottom -40px
+				opacity 0.25
+
+	&__content
+		width 100%
+		max-width 1280px
+		margin 0 auto
+		padding 0 100px
+		box-sizing border-box
+
+		@media (max-width r-smallbook)
+			padding 0 80px
+
+		&--type
+			&_inner
+				padding 88px 100px
+
+				@media (max-width r-smallbook)
+					padding 88px 80px
+
+			&_flexible
+				max-width 1600px
+				padding 88px 50px
+
+	&__header
+		position fixed
+		width 100%
+		height 106px
+		z-index 4
+
+	&__footer
+		height 110px
+		position fixed
+		bottom 0
+		left 0
+		width 100%
+		z-index 4
+
+	&__sprite
+		width 0
+		height 0
+
+	&__nav
+		position fixed
+		height 0
+		left 50%
+		transform translate(-50%, 0)
+		width 100%
+		max-width 1600px
+		margin 0 auto
+		height 0
+		bottom 50%
+		z-index 5
+
+	&__item
+		width 100%
+		overflow hidden
+
+	@media (max-width r-tablet)
+		&__content
+			padding-left 52px
+			padding-right 52px

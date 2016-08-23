@@ -1,0 +1,41 @@
+.day
+	margin-right 120px
+	clearfix()
+	&__digit
+		font 152px/140px Charter
+		font-style italic
+		letter-spacing: -0.16em
+
+	&__mount
+		font 700 18px/24px kelson
+		text-transform uppercase
+		margin-top 12px
+		margin-left 70px
+
+	&__year
+		font-weight: 100
+
+	&--type
+		&_right
+			margin-right 0
+			.day
+				&__digit
+					float left
+
+				&__wrap
+					float left
+					vertical-align: bottom
+					position absolute
+					bottom 10px
+					left 100%
+					margin-left 40px
+
+				&__mount
+					margin 0
+
+	@media (max-width r-smallbook)
+		margin-right 40px
+
+	@media (max-width r-mobile)
+		&__mount
+			margin-left 0

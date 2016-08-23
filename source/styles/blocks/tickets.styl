@@ -1,0 +1,188 @@
+.tickets
+	padding: 87px 0 59px
+
+	&__back
+		position absolute
+
+	&__content
+		display flex
+		justify-content space-around
+
+	&__item
+		width 270px
+		position relative
+
+		&:nth-child(1)
+			.tickets
+				&__back
+					background-image: url("../images/ticket__back_1.png")
+					background-size: (579 / 2px) (558 / 2px)
+					width (579 / 2px)
+					height (558 / 2px)
+					top -20px
+					left -58px
+
+				&__icon
+					top -6px
+					right -42px
+				&__box
+					border-color #4b4e52
+
+		&:nth-child(2)
+			.tickets
+				&__back
+					background-image: url("../images/ticket__back_2.png")
+					background-size: (579 / 2px) (558 / 2px)
+					width (579 / 2px)
+					height (558 / 2px)
+					top -20px
+					left -58px
+
+				&__icon
+					top -6px
+					right -42px
+				&__box
+					border-color #512951
+
+		&:nth-child(3)
+			.tickets
+				&__back
+					background-image: url("../images/ticket__back_3.png")
+					background-size: (579 / 2px) (558 / 2px)
+					width (579 / 2px)
+					height (558 / 2px)
+					top -20px
+					left -58px
+
+				&__icon
+					top -6px
+					right -42px
+				&__box
+					border-color #3a5775
+
+
+	&__label
+		font 700 55px/60px bebas
+		text-transform uppercase
+		margin-left -70px
+		margin-bottom 10px
+
+	&__icon
+		stroke c-yellow
+		position absolute
+
+	&__desc
+		font 16px/18px 'PT Sans'
+		margin-top 15px
+
+		&-content
+			opacity 0
+			transition-property: all
+			transition-duration: t-dur
+			transition-timing-function: t-bezier
+
+		&:hover
+			fieldset
+				border-color rgba(#dcdde0, .3)
+
+			legend
+				opacity 1
+
+			.tickets__desc-content
+				opacity 1
+
+		fieldset
+			border 1px solid transparent
+			border-radius 3px
+			padding 15px 20px 10px
+			transition-property: all
+			transition-duration: t-dur
+			transition-timing-function: t-bezier
+
+		legend
+			padding 5px
+			text-transform uppercase
+			font 14px/21px kelson
+			transform translate(0, 2px)
+			opacity .2
+			transition-property: all
+			transition-duration: t-dur
+			transition-timing-function: t-bezier
+
+		p
+			font 16px/20px 'PT Sans'
+			opacity .6
+			margin-bottom 10px
+
+		b
+			font-weight 700
+
+	&__price
+		font 700 33px/40px bebas
+		letter-spacing: 0.04em
+		color #898989
+		margin-top 15px
+		margin-bottom 15px
+
+	&__vis
+		color c-white
+
+	&__cur
+		font-weight 200
+		font-size 70%
+		position relative
+		top -8px
+		margin-left 5px
+		letter-spacing: 0
+
+	&__box
+		border 20px solid #fff
+		box-sizing border-box
+		position relative
+		padding 80px 20px 0
+		height 350px
+
+	&__buy
+		text-align: right;
+		position: absolute;
+		bottom: 10px;
+		right: -40px;
+
+	@media (max-width r-mobile)
+		&__content
+			flex-direction: column;
+
+		&__item
+			width 100%
+			max-width 363px
+			margin 0 auto 40px
+
+		&__label
+			font-size: 75px
+			margin-bottom 20px
+			margin-left -90px
+
+		&__box
+			padding-top 120px
+			padding-left 30px
+			padding-right 30px
+			height 455px
+
+		&__desc
+			font-size: 21px
+			line-height 25px
+
+			&-content
+				transition-duration: 0 !important
+			legend
+				transition-duration: 0 !important
+				font-size: 19px
+			fieldset
+				transition-duration: 0 !important
+				height 0
+
+				&:hover
+					height auto
+
+		&__price
+			font-size: 45px

@@ -1,0 +1,13 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 139.67">
+	<polygon points="30.33 9.67 65 1 114 6.67 108.33 19.33 54.67 22.92 30.33 9.67" style="fill:none;stroke-linejoin:round;stroke-width:2px"/>
+	<polyline points="30.33 9.67 1 53.67 9.33 92.67 43 72.67 54.67 22.92" style="fill:none;stroke-linejoin:round;stroke-width:2px"/>
+	<polyline points="43 72.67 88 101.67 83.33 138.67 35.33 134.17 9.33 92.67" style="fill:none;stroke-linejoin:round;stroke-width:2px"/>
+	<polyline points="114 6.67 138.67 47 148 86.67 128.67 70.42 108.33 19.33" style="fill:none;stroke-linejoin:round;stroke-width:2px"/>
+	<line x1="88" y1="101.67" x2="128.67" y2="70.42" style="fill:none;stroke-linejoin:round;stroke-width:2px"/>
+	<polyline points="148 86.67 120.67 128 83.33 138.67" style="fill:none;stroke-linejoin:round;stroke-width:2px"/>
+	<polyline points="65 1 60.5 39.17 106 68.17 138.67 47" style="fill:none;stroke-linejoin:round;stroke-width:0.25px;stroke-dasharray:4"/>
+	<polyline points="1 53.67 19.5 70.42 60.5 39.17" style="fill:none;stroke-linejoin:round;stroke-width:0.25px;stroke-dasharray:4"/>
+	<polyline points="35.33 134.17 41 119.42 19.5 70.42" style="fill:none;stroke-linejoin:round;stroke-width:0.25px;stroke-dasharray:4"/>
+	<polyline points="120.67 128 93.5 118.17 41 119.42" style="fill:none;stroke-linejoin:round;stroke-width:0.25px;stroke-dasharray:4"/>
+	<line x1="106" y1="68.17" x2="93.5" y2="118.17" style="fill:none;stroke-linejoin:round;stroke-width:0.25px;stroke-dasharray:4"/>
+</svg>

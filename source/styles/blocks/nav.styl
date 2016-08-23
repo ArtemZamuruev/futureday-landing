@@ -1,0 +1,39 @@
+.nav
+	float right
+	transform translate(0, -100%)
+	margin-right 50px
+
+	&__item
+		display block
+		z-index 1
+		position relative
+		width 22px
+		height 22px
+		cursor pointer
+
+		svg
+			stroke-dasharray  70
+			stroke-dashoffset 70
+			transition-property: all
+			transition-duration: t-dur
+			transition-timing-function: t-bezier
+			transform rotate(180deg)
+
+		&.-js-selected
+				svg
+					stroke-dashoffset 0
+
+		&:before
+			content ""
+			display block
+			position absolute
+			top 50%
+			left 50%
+			margin -2px 0 0 -2px
+			width 4px
+			height 4px
+			border-radius 50%
+			background-color c-white
+
+	@media (max-width r-tablet)
+		display none

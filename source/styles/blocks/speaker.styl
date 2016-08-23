@@ -1,0 +1,268 @@
+.speaker
+	&__name
+		font 700 24px/30px kelson
+		letter-spacing -0.06em
+		text-transform uppercase
+
+	&__role
+		font 14px/17px 'PT Sans'
+		color c-white
+		opacity 0.4
+		margin-top 10px
+
+	&__desc
+		position relative
+
+	&__item
+		float left
+		position relative
+		z-index 3
+		position absolute
+		.speaker
+			&__image
+				overflow hidden
+				position relative
+				background-position center center
+				background-repeat no-repeat
+				background-size cover
+
+		&:nth-child(1)
+			right 100%
+			margin-right -25px
+			top 380px
+			opacity: .2
+
+			@media (max-width r-smallbook)
+				margin-right 0
+
+			.speaker
+				&__desc
+					margin-top -10px
+					position relative
+				&__role
+					display none
+				&__image
+					width 186px
+					height 161px
+
+		&:nth-child(2)
+			left 58px
+			top 140px
+
+			.speaker
+				&__image
+					width 410px
+					height 334px
+				&__desc
+					margin-top 37px
+					margin-left 18px
+				&__role
+					margin-top 0
+
+			@media (max-width r-smallbook)
+				left 50px
+
+				.speaker
+					&__image
+						width 310px
+						height 234px
+
+		&:nth-child(3)
+			left 270px
+			top 50%
+			margin-top -21px
+			.speaker
+				&__image
+					width 253px
+					height 296px
+				&__desc
+					margin-top -96px
+					margin-left 23px
+					position relative
+					color c-black
+				&__role
+					color #656565
+					margin-top 0
+
+			@media (max-width r-smallbook)
+				margin-top -100px
+				left 210px
+				top 421px
+				.speaker
+					&__image
+						width 203px
+						height 246px
+					&__desc
+						margin-top -86px
+
+		&:nth-child(4)
+			left: 50%;
+			top: 320px;
+			margin-left: -158px;
+			z-index 2
+			.speaker
+				&__image
+					width 198px
+					height 162px
+					opacity .7
+				&__desc
+					margin 21px 0 0 66px
+				&__role
+					margin-top 0
+
+			@media (max-width r-smallbook)
+				top 240px
+				margin-left 0
+				left 380px
+				.speaker
+					&__image
+						width 148px
+						height 112px
+					&__desc
+						margin-left 50px
+
+		&:nth-child(5)
+			left 50%
+			top 50%
+			margin 118px 0 0 82px
+			.speaker
+				&__image
+					width 186px
+					height 158px
+				&__desc
+					position absolute
+					bottom 0
+					left 100%
+					margin-left 24px
+				&__role
+					margin-top 0
+
+			@media (max-width r-smallbook)
+				left 434px
+				margin 80px 0 0 0
+				top 421px
+				.speaker
+					&__image
+						width 136px
+						height 108px
+
+		&:nth-child(6)
+			right 0
+			top 50%
+			margin -92px -67px 0 0
+			opacity: .2
+
+			@media (max-width r-smallbook)
+				margin-right 0
+				right -200px
+
+			.speaker
+				&__image
+					width 199px
+					height 161px
+
+				&__desc
+					margin -10px 0 0 30px
+					position relative
+
+				&__role
+					display none
+
+	@media (max-width r-tablet)
+		&__name
+			font-size: 30px
+			line-height 35px
+
+		&__role
+			font-size: 18px
+			line-height 20px
+
+		&__wrap
+			clearfix()
+		&__item
+			position relative
+			right auto !important
+			left auto !important
+			top auto !important
+
+			&:nth-child(1)
+			&:nth-child(6)
+				display none
+
+			&:nth-child(2)
+				width 66%
+
+				.speaker
+					&__image
+						width 100%
+						padding-top 81%
+						height 0
+
+					&__desc
+						margin-left 52px
+						margin-top 33px
+
+			&:nth-child(3)
+				width 28.5%
+				float right
+				margin-top 16%
+
+				.speaker
+					&__image
+						width 100%
+						padding-top 87%
+						height 0
+
+					&__name
+						font-size: 24px
+						line-height 30px
+
+					&__desc
+						color c-white
+						margin-top 20px
+						margin-left 0
+
+			&:nth-child(4)
+				clear left
+				width 31%
+				float left
+				margin-top 7%
+				left 52px !important
+
+				.speaker
+					&__image
+						width 100%
+						padding-top 81%
+						height 0
+
+					&__desc
+						color c-white
+						margin-top -22px
+						margin-left 0
+						font-size: 28px
+						line-height 32px
+
+
+			&:nth-child(5)
+				width 45%
+				float right
+				margin-right 52px
+				margin-top -47px
+
+				.speaker
+					&__image
+						width 100%
+						padding-top 117%
+						height 0
+
+					&__desc
+						left 0
+						bottom 22px
+						color c-black
+
+					&__role
+						color c-black
+
+					&__name
+						font-size 27px
+						line-height 32px

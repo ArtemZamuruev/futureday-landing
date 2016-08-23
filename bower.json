@@ -1,0 +1,27 @@
+{
+  "name": "futureday",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "delch <idanieru@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  },
+  "devDependencies": {
+    "reset-css": "^2.0.2011012603",
+    "jquery-validation": "jquery.validation#^1.15.0",
+    "jquery-form": "https://github.com/malsup/form.git#^3.46.0",
+    "jquery-mask-plugin": "^1.14.0"
+  }
+}

@@ -1,0 +1,58 @@
+.logo
+	display flex
+	color inherit
+	text-decoration: none
+
+	&:hover &
+		&__line
+			stroke c-pink
+
+	&__line
+		fill none
+		stroke #fff249
+		stroke-linejoin round
+		stroke-width 4px
+		stroke-dasharray 500
+		stroke-dashoffset -500
+		transition-property all
+		transition-duration: t-dur
+		transition-timing-function: t-bezier
+
+		&:nth-child(2)
+			transition-delay .10s
+		&:nth-child(3)
+			transition-delay .15s
+		&:nth-child(4)
+			transition-delay .20s
+		&:nth-child(5)
+			transition-delay .25s
+
+	&__image
+		svg
+			width 42px
+			height 39px
+
+	&__content
+		font 700 14px/18px kelson
+		letter-spacing 0.02em
+		text-transform uppercase
+		display flex
+		align-items center
+		padding-left 20px
+		transition-property: all
+		transition-duration: t-dur
+		transition-timing-function: t-bezier
+
+	@media (max-width r-mobile)
+		&__content
+			display none
+
+		&__image
+			svg
+				width 68px
+				height 64px
+
+.layout.js-loaded
+	.logo
+		&__line
+			stroke-dashoffset 0

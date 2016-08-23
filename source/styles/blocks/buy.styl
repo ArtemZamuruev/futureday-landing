@@ -1,0 +1,60 @@
+.buy
+	position relative
+	display inline-block
+	padding-bottom 10px
+
+	&__value
+		color #fff249
+		text-transform uppercase
+		font 700 18px/24px bebas
+		letter-spacing 0.120em
+
+	&:after
+		content ""
+		display block
+		position absolute
+		bottom 0
+		left 50%
+		width 0
+		height 6px
+		background-color #e01acb
+		transition-property: all
+		transition-duration: t-dur
+		transition-timing-function: t-bezier
+
+	&:hover
+		&:after
+			width 100%
+			left 0
+
+	&--state
+		&_active
+			&:after
+				width 100%
+				left 0
+
+	&--size
+		&_big
+			&:after
+				height 10px
+
+			.buy
+				&__value
+					font-size 24px
+					line-height 32px
+
+	@media (max-width r-mobile)
+		&--size
+			&_big
+				&:after
+					height 10px
+
+				.buy
+					&__value
+						font-size 36px
+						line-height 42px
+
+		&--size
+			&_big
+				&:after
+					height 15px

@@ -1,0 +1,535 @@
+doctype html
+html(lang='ru')
+	head
+		title Hello, world!
+		link(rel="stylesheet", href="./css/index.css")
+		link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+
+		meta(charset='utf-8')
+		meta(name='viewport' content='initial-scale=.5, maximum-scale=.5, minimum-scale=.5, user-scalable=no')
+
+		script(type="text/javascript" defer src="js/index.js")
+		script(type="text/javascript" defer src="https://maps.googleapis.com/maps/api/js?callback=initMap")
+	body
+		.layout__sprite
+			//=include ../tmp/symbol/svg/sprite.symbol.svg
+		.layout
+			.layout__backgrounds
+				.layout__background.-intro.-js-active
+				.layout__background.-speakers
+					.layout__cross.-lft
+					.layout__cross.-rt
+				.layout__background.-forwho
+				.layout__background.-advantages
+				.layout__background.-shedule
+				.layout__background.-tickets
+				.layout__background.-place
+				.layout__background.-contacts
+
+			.layout__header
+				header.header
+					.header__content
+						.header__logo
+							a.logo(href="./")
+								.logo__image
+									svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162.67 151.33")
+										polygon.logo__line(points="36.67 12.67 116.67 2 160.67 66.67 127.33 139.33 48 149.33 2 78.67 36.67 12.67")
+										polygon.logo__line(points="116.67 2 126.17 65.17 48.17 29.17 116.67 2")
+										polyline.logo__line(points="56.67 113.17 2 78.67 48.17 29.17 36.67 12.67")
+										polyline.logo__line(points="160.67 66.67 126.17 65.17 56.67 113.17 48.17 29.17")
+										polyline.logo__line(points="126.17 65.17 127.33 139.33 56.67 113.17 48.83 149.33")
+
+								.logo__content Future<br>day
+
+						.header__menu
+							.menu
+								- var menuItems = [];
+								- menuItems.push({name: "Спикеры", link: "speakers"});
+								- menuItems.push({name: "Для кого", link: "forwho"});
+								- menuItems.push({name: "Что вы получите", link: "advantages"});
+								- menuItems.push({name: "Программа", link: "shedule"});
+								- menuItems.push({name: "Билеты", link: "tickets"});
+								- menuItems.push({name: "Место", link: "place"});
+								- menuItems.push({name: "Контакты", link: "contacts"});
+
+								- for(var i = 0; i<menuItems.length; i++) {
+								.menu__item
+									a.menu__link(href="#" + menuItems[i].link)!= menuItems[i].name
+								- }
+
+						.header__buy
+							.buy
+								.buy__value Купить билет
+			.layout__nav
+				.nav
+					- menuItems.unshift({name: "Главная", link: "intro"})
+					- for(var i = 0; i<menuItems.length; i++) {
+						a.nav__item(class=i === 0 ? "-js-selected" : "" href="#"+menuItems[i].link )
+							svg(height="22" width="22")
+								circle(cx="11" cy="11" r="9" stroke="#fffef7" stroke-width="2" fill="none")
+					- }
+
+			.layout__container
+				.layout__item
+					a(name="intro")
+					.intro
+						.intro__content.layout__content
+							.intro__wrap
+								.intro__day
+									.day
+										.day__digit 16
+										.day__mount октября
+											.day__year 2016
+
+								h1.intro__header Future day
+								.intro__label Будущее технологий
+								p.intro__desc Конференция о будущем технологий и о технологиях будущего ­FutureDay ­позволит погрузиться в мир людей, создающих и развивающих инновации
+								.intro__buy
+									.buy.buy--state_active.buy--size_big
+										.buy__value Купить билет
+
+				.layout__item
+					a(name="speakers")
+					.speakers
+						.speakers__content.layout__content.layout__content--type_inner
+							.speakers__container
+								h2.speakers__header Организаторы мероприятия работают с передовыми проектами инновационной среды
+								p.speakers__desc На конференции поделятся опытом как люди уже добившиеся успеха (создатели инноваций, технологических корпораций и футурологи), так и те, кто только начинает свою карьеру в качестве “творцов будущего” ­предприниматели, молодые ученые, открытия которых станут революционными.
+							.speakers__items
+								.speaker
+									.speaker__wrap
+										.speaker__item
+											.speaker__image(style='background-image:url("./content/speaker_1.jpg")')
+											.speaker__desc
+												.speaker__name Андрей<br>Чернышев
+												.speaker__role CEO Kaspersky Lab
+
+										.speaker__item
+											.speaker__image(style='background-image:url("./content/speaker_1.jpg")')
+											.speaker__desc
+												.speaker__name Андрей<br>Чернышев
+												.speaker__role CEO Kaspersky Lab
+
+										.speaker__item
+											.speaker__image(style='background-image:url("./content/speaker_1.jpg")')
+											.speaker__desc
+												.speaker__name Андрей<br>Чернышев
+												.speaker__role CEO Kaspersky Lab
+
+										.speaker__item
+											.speaker__image(style='background-image:url("./content/speaker_1.jpg")')
+											.speaker__desc
+												.speaker__name Андрей<br>Чернышев
+												.speaker__role CEO Kaspersky Lab
+
+										.speaker__item
+											.speaker__image(style='background-image:url("./content/speaker_1.jpg")')
+											.speaker__desc
+												.speaker__name Андрей<br>Чернышев
+												.speaker__role CEO Kaspersky Lab
+
+										.speaker__item
+											.speaker__image(style='background-image:url("./content/speaker_1.jpg")')
+											.speaker__desc
+												.speaker__name Андрей<br>Чернышев
+												.speaker__role CEO Kaspersky Lab
+
+				.layout__item
+					a(name="forwho")
+					.forwho
+						.forwho__content.layout__content.layout__content--type_inner
+							.forwho__wrap
+								.forwho__main
+									.forwho__main-item.-js-active(data-slider-name="company")
+										.forwho__icon
+											svg(class="icon" viewBox="0 0 286 493")
+												use(xlink:href="#companies")
+										.forwho__label Эта конференция для
+										.forwho__header
+											span Компаний
+										.forwho__text Которые разрабатывают инновационные продукты, чтобы рассказать о них концентрированной целевой аудитории инвесторов клиентов и партнеров
+									.forwho__main-item(data-slider-name="investors")
+										.forwho__icon
+											svg(class="icon" viewBox="0 0 286 493")
+												use(xlink:href="#investors")
+										.forwho__label Эта конференция для
+										.forwho__header
+											span Инвесторов
+										.forwho__text Которые разрабатывают инновационные продукты, чтобы рассказать о них концентрированной целевой аудитории инвесторов клиентов и партнеров
+									.forwho__main-item(data-slider-name="professionals")
+										.forwho__icon
+											svg(class="icon" viewBox="0 0 286 493")
+												use(xlink:href="#professionals")
+										.forwho__label Эта конференция для
+										.forwho__header
+											span Профессионалов
+										.forwho__text Которые разрабатывают инновационные продукты, чтобы рассказать о них концентрированной целевой аудитории инвесторов клиентов и партнеров
+									.forwho__main-item(data-slider-name="scient")
+										.forwho__icon
+											svg(class="icon" viewBox="0 0 286 493")
+												use(xlink:href="#scientists")
+										.forwho__label Эта конференция для
+										.forwho__header
+											span Ученых
+										.forwho__text Которые разрабатывают инновационные продукты, чтобы рассказать о них концентрированной целевой аудитории инвесторов клиентов и партнеров
+									.forwho__main-item(data-slider-name="edition")
+										.forwho__icon
+											svg(class="icon" viewBox="0 0 286 493")
+												use(xlink:href="#magazines")
+										.forwho__label Эта конференция для
+										.forwho__header
+											span Изданий
+										.forwho__text Которые разрабатывают инновационные продукты, чтобы рассказать о них концентрированной целевой аудитории инвесторов клиентов и партнеров
+								.forwho__menu
+									.forwho__menu-item.-js-active(data-slider-target="company") Компании
+									.forwho__menu-item(data-slider-target="investors") Инвесторы
+									.forwho__menu-item(data-slider-target="professionals") Профессионалы
+									.forwho__menu-item(data-slider-target="scient") Ученые
+									.forwho__menu-item(data-slider-target="edition") Издания
+
+				.layout__item
+					a(name="advantages")
+					.advantages
+						.advantages__container.layout__content.layout__content--type_inner
+							.advantages__items
+								.advantages__item
+									.advantages__box
+										.advantages__header Слушатели
+										.advantages__images
+											.advantages__image
+												img(src="./content/advant_1_2.jpg" width="126" height="123")
+											.advantages__image
+												img(src="./content/advant_1_1.jpg" width="207" height="207")
+											.advantages__image
+												img(src="./content/advant_1_3.jpg" width="126" height="123")
+
+									.advantages__content
+										p Смогут сформировать для себя картину будущего технологий на ближайшие 5­7 лет
+										p Взглянуть на технологическое развитие под другим углом ­понять, что и как влияет на формирование технологических трендов
+										p Познакомиться с опытом зарубежных ученых и предпринимателей
+
+								.advantages__item
+									.advantages__box
+										.advantages__header Экспоненты
+										.advantages__images
+											.advantages__image
+												img(src="./content/advant_2_1.jpg" width="227" height="175")
+
+									.advantages__content
+										p Смогут поделиться своими проектами и получить обратную связь
+
+								.advantages__item
+									.advantages__box
+										.advantages__image
+											img(src="./content/advant_3_1.jpg" width="231" height="232")
+										.advantages__image
+											img(src="./content/advant_3_2.jpg" width="126" height="123")
+
+									.advantages__header Инвесторы
+									.advantages__content
+										p Смогут познакомиться с лучшими технологическими проектами, а проекты встретить вовлеченных в технологии будущего smart­ инвесторов
+
+				.layout__item
+					a(name="shedule")
+					.shedule
+						.shedule__content.layout__content.layout__content--type_inner
+							.shedule__header Конференция проходит в новом формате, каждая секция содержит в себе <span>3</span> составляющие:
+							.shedule__icons
+								.shedule__icon-wrap
+									.shedule__icon
+										.shedule__icon-front
+											svg(class="icon" width="86" height="93" viewBox="0 0 413 448")
+												use(xlink:href="#programm_1")
+											.shedule__icon-back
+									.shedule__label <span>Презентация</span> тренда и его аналитический обзор
+								.shedule__icon-wrap
+									.shedule__icon
+										.shedule__icon-front
+											svg(class="icon" width="90" height="92" viewBox="0 0 433.55 448")
+												use(xlink:href="#programm_2")
+											.shedule__icon-back
+									.shedule__label <span>Дискуссия</span> экспертов по представленной тематике
+								.shedule__icon-wrap
+									.shedule__icon
+										.shedule__icon-front
+											svg(class="icon" width="107" height="71" viewBox="0 0 754.53 448")
+												use(xlink:href="#programm_3")
+											.shedule__icon-back
+									.shedule__label <span>Выступление</span> наиболее яркого проекта, отражающего тренд
+
+							.shedule__table
+								.table
+									.table__wrap
+										.table__row
+											.table__cell
+												|10
+												.table__cell-min 00
+												.table__cell-sep &nbsp;–
+												|&nbsp;11
+												.table__cell-min 00
+
+											.table__cell
+												|11
+												.table__cell-min 00
+												.table__cell-sep &nbsp;–
+												|&nbsp;12
+												.table__cell-min 00
+
+											.table__cell
+												|11
+												.table__cell-min 00
+												.table__cell-sep &nbsp;–
+												|&nbsp;12
+												.table__cell-min 00
+
+											.table__cell
+												|12
+												.table__cell-min 00
+												.table__cell-sep &nbsp;–
+												|&nbsp;14
+												.table__cell-min 00
+
+											.table__cell
+												|12
+												.table__cell-min 00
+												.table__cell-sep &nbsp;–
+												|&nbsp;13
+												.table__cell-min 00
+
+											.table__cell
+												|14
+												.table__cell-min 00
+												.table__cell-sep &nbsp;–
+												|&nbsp;16
+												.table__cell-min 00
+
+											.table__cell
+												|14
+												.table__cell-min 00
+												.table__cell-sep &nbsp;–
+												|&nbsp;15
+												.table__cell-min 00
+
+											.table__cell
+												|16
+												.table__cell-min 00
+												.table__cell-sep &nbsp;–
+												|&nbsp;19
+												.table__cell-min 00
+
+											.table__cell
+												|16
+												.table__cell-min 00
+												.table__cell-sep &nbsp;–
+												|&nbsp;19
+												.table__cell-min 00
+
+										.table__row
+											.table__cell
+												span.sg__pink main
+
+											.table__cell
+												span.sg__pink main
+
+											.table__cell
+												span.sg__yell next
+
+											.table__cell
+												span.sg__pink main
+
+											.table__cell
+												span.sg__yell next
+
+											.table__cell
+												span.sg__pink main
+
+											.table__cell
+												span.sg__yell next
+
+											.table__cell
+												span.sg__pink main
+
+											.table__cell
+												span.sg__yell next
+
+										.table__row
+											.table__cell Cоздавая инновации меняем будущее. Мини-лекции о трендах
+											.table__cell Финансовые рынки и экономика будущего
+											.table__cell Будущее и роботы: искуственный интеллект и восстание машин
+											.table__cell Презентация “Новые рынки”  партнерской секции НТИ
+											.table__cell Питч-сессия “Передовые технологии России”
+											.table__cell Игры и развлечения будущего
+											.table__cell Питч-сессия “Медицина завтра”
+											.table__cell Презентация “Новые рынки” партнерской секции НТИ
+											.table__cell Питч-сессия “Передовые технологии России”
+							.shedule__extend
+								.extend
+									.extend__separator
+									.extend__header В течение всего мероприятия работает выставочное пространство, где каждый участник найдет занятие по вкусу:
+									.extend__item
+										.extend__name
+											span.extend__bold Future
+											|&nbsp;startups
+											.extend__zone zone
+										.extend__label Выставка технологий будущего
+
+									.extend__item
+										.extend__name
+											span.extend__bold Future
+											|&nbsp;Arts
+											.extend__zone hall
+										.extend__label Цифровое искусство будущего
+
+									.extend__item
+										.extend__name
+											span.extend__bold food & social
+											.extend__zone corner
+										.extend__label Перекусить и пообщаться
+
+				.layout__item
+					a(name="tickets")
+					.tickets
+						.tickets__content.layout__content.layout__content--type_inner
+							.tickets__item
+								.tickets__back
+								.tickets__box
+									.tickets__icon
+										svg(class="icon" width="112" height="109" viewBox="0 0 133 130")
+											use(xlink:href="#ticket__icon_1")
+									.tickets__label Базовый
+									.tickets__desc Доступ ко всем сессиям и выставкам проектов
+									.tickets__price
+										span.tickets__vis 20
+										|&nbsp;000
+										span.tickets__cur Руб
+									.tickets__buy
+										.buy.buy--size_big.buy--state_active
+											.buy__value Купить билет
+
+								.tickets__desc
+									form
+										fieldset
+											legend.tickets__desc-label Скидка
+											.tickets__desc-content
+												p Для инвесторов <b>VentureClub</b> по тарифу Club ­— бесплатно
+												p Для клиентов <b>FutureAction</b> — бесплатно
+
+							.tickets__item
+								.tickets__back
+								.tickets__box
+									.tickets__icon
+										svg(class="icon" width="112" height="109" viewBox="0 0 133 130")
+											use(xlink:href="#ticket__icon_2")
+									.tickets__label Особый
+									.tickets__desc Базовый + вечернее мероприятие для VIP гостей и спикеров
+									.tickets__price
+										span.tickets__vis 30
+										|&nbsp;000
+										span.tickets__cur Руб
+									.tickets__buy
+										.buy.buy--size_big.buy--state_active
+											.buy__value Купить билет
+
+								.tickets__desc
+									form
+										fieldset
+											legend.tickets__desc-label Скидка
+											.tickets__desc-content
+												p Для инвесторов <b>VentureClub</b> по тарифу Club ­— бесплатно
+												p Для клиентов <b>FutureAction</b> — бесплатно
+
+							.tickets__item
+								.tickets__back
+								.tickets__box
+									.tickets__icon
+										svg(class="icon" width="112" height="109" viewBox="0 0 133 130")
+											use(xlink:href="#ticket__icon_3")
+									.tickets__label Экспонент
+									.tickets__desc Если вы хотите представить компанию или продукт
+									.tickets__price
+										span.tickets__vis 100
+										|&nbsp;000
+										span.tickets__cur Руб
+									.tickets__buy
+										.buy.buy--size_big.buy--state_active
+											.buy__value Купить билет
+
+								.tickets__desc
+									form
+										fieldset
+											legend.tickets__desc-label Подробнее
+											.tickets__desc-content
+												p Для инвесторов <b>VentureClub</b> по тарифу Club ­— бесплатно
+												p Для клиентов <b>FutureAction</b> — бесплатно
+
+				.layout__item
+					a(name="place")
+					.place
+						.layout__content.layout__content--type_inner
+							.place__map#gmap
+							.place__content
+
+								.place__address
+									.place__house ЦЕНТРАЛЬНЫЙ<br>ДОМ ХУДОЖНИКА
+									.place__desc Москва, ул. Крымский<br>вал 10/14
+								.place__image
+									img(src="content/place.jpg" width="400" height="325")
+								.place__date
+									.day.day--type_right
+										.day__digit 16
+										.day__wrap
+											.day__mount октября
+											.day__year 2016
+								.place__rumble
+
+				.layout__item
+					a(name="contacts")
+					.contacts
+						.layout__content.layout__content--type_inner
+							.contacts__header Будем на связи
+							.contacts__label Подпишитесь на рассылку, чтобы оставаться в курсе всех новостей, изменений и обновлений касающихся мероприятия
+							.contacts__formWrap
+								.contacts__success Все успешно.
+								.contacts__form
+									form.form(action="/" method="GET")
+										.form__item
+											input(type='text' name='contacts[name]' required placeholder="Имя")
+										.form__item
+											input(type='text' name='contacts[phone]' required placeholder="Телефон")
+										.form__item
+											input(type='text' name='contacts[mail]' required placeholder="E-мейл")
+										.form__item
+											button(type='submit') Подписаться
+									.contacts__rules Подписываясь, вы даете согласие на <b>обработку персональных данных</b>
+							.contacts__more Вопросы, предложения или идеи, которые вы хотели бы обсудить:
+							.contacts__add
+								.contacts__item.contacts__item--type_name
+									span Елена Привалова
+								.contacts__item.contacts__item--type_phone
+									span +7 905&nbsp;
+									| 746 47 30
+								.contacts__item.contacts__item--type_mail
+									a(href="mailto:ep@futureday.ru") ep@futureday.ru
+
+
+			.layout__footer
+				footer.footer
+					.footer__content
+						.footer__copyright
+							.copyright
+								.copyright__content © 2016 Все права защищены
+
+						.footer__social
+							.social
+								.social__item
+									a.social__link(href="#")
+										svg(class="icon" viewBox="0 0 20 20")
+											use(xlink:href="#fb")
+								.social__item
+									a.social__link(href="#")
+										svg(class="icon" viewBox="0 0 20 20")
+											use(xlink:href="#in")
+								.social__item
+									a.social__link(href="#")
+										svg(class="icon" viewBox="0 0 20 20")
+											use(xlink:href="#tw")

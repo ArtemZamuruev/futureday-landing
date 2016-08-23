@@ -1,0 +1,77 @@
+@require "../../bower_components/reset-css/reset.css"
+@require "./utils/*.styl"
+@require "./blocks/*.styl"
+
+webfont('kelson', 'kelson-sans-regular', false, 400)
+webfont('kelson', 'kelson-sans-light', false, 100)
+webfont('kelson', 'kelson-sans-bold', false, 700)
+webfont('bebas', 'bebas-neue-bold', false, 700)
+webfont('bebas', 'bebas-neue-light', false, 100)
+
+html,body
+	font 400 16px/21px 'PT Sans', sans-serif
+	letter-spacing 0.02em
+	color #fffef7
+
+	@media (max-width r-mobile)
+		font-size: 21px
+		line-height 25px
+
+input[type='text']
+input[type='password']
+	height 42px
+	font 400 16px/19px 'PT Sans'
+	background-color: transparent;
+	border 1px solid c-white
+	width 270px
+	padding 0 15px
+	box-sizing border-box
+	opacity .3
+	color c-white
+	transition-property: all
+	transition-duration: t-dur
+	transition-timing-function: t-bezier
+	outline: none
+
+	&:focus
+		opacity 1
+
+	&.error
+		color #cd0101
+		border-color #cd0101
+		opacity 1
+
+		&::placeholder
+			color #cd0101
+
+	@media (max-width r-smallbook)
+		width 230px
+
+input[type='text']::placeholder
+	text-transform uppercase
+	font-size 14px
+	font-family 'PT Sans'
+
+button[type='submit']
+	font 700 18px/24px bebas
+	letter-spacing 0.12em
+	color #b0b0b0
+	background-color: transparent;
+	border none
+	border-bottom 8px solid c-white
+	padding 0
+	outline: none
+	cursor pointer
+	transition-property: all
+	transition-duration: t-dur
+	transition-timing-function: t-bezier
+
+	&:hover
+		color c-yellow
+		border-color c-yellow
+
+b
+	font-weight 700
+
+.gmnoprint
+	display none

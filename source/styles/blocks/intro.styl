@@ -1,0 +1,78 @@
+.intro
+	max-width 1080px
+	padding 0 15px
+	box-sizing border-box
+	margin 0 auto
+	&__wrap
+		max-width 653px
+		width 100%
+		position relative
+		margin-bottom 30px
+
+	&__content
+		display flex
+		min-height 743px
+		justify-content center
+		flex-direction column
+		align-items center
+
+	&__header
+		font 700 104px/124px 'bebas'
+		color c-pink
+
+	&__label
+		font 700 18px/24px 'kelson'
+		color c-white
+		text-transform uppercase
+		margin-top -20px
+
+	&__desc
+		margin-top 30px
+		max-width 440px
+		font-size 18px
+		line-height 26px
+		margin-bottom 78px
+
+	&__buy
+		display inline-block
+
+	&__day
+		position absolute
+		right 100%
+		top 0
+
+
+	@media (max-width r-tablet)
+		&__wrap
+			padding-left 80px
+			box-sizing border-box
+
+		&__day
+			margin-right -80px
+
+	@media (max-width r-mobile)
+		padding 0
+
+		&__content
+			min-height 960px
+
+		&__wrap
+			padding-left 0
+			margin-top 10px
+
+		&__day
+			right auto
+			left 0
+
+		&__label
+			display none
+
+		&__desc
+			font-size 30px
+			line-height 41px
+			max-width none
+
+		&__header
+			font-size 107px
+			letter-spacing 0.035em
+			margin-left 170px
