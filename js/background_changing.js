@@ -6,31 +6,117 @@
 * 
 */
 
-var viewportHeight = $(window).height();
+var sectionsParameters = {}
+
+var viewport = {
+    height: parseFloat($(window).height()),
+    
+    curScrTop: 0.0,
+    prevScrTop: 0.0,
+    
+    scrCenter: 0.0,
+    scrBottom: 0.0,
+    
+    topSection: "",
+    ctrSection: "",
+    botSection: ""
+}
+
+
+$(document).ready(initSectionsParameters);
 
 $(document).on("scroll", function(){
-    var $sections = $("div.layout__item"),
-        currentTop = $(this).scrollTop(),
-        i = 0;
-    for (i = 0, i < $sections.length; i++){
-        ;
+    updateViewport();
+    
+    resetAllBackgroundsExceptVisible();
+    if (viewport.botSection != viewport.topSection){
+        var sectionParamSet = sectionsParameters[viewport.botSection];
+        var botSectionOffTop = sectionParamSet.offset_top;
+        var topPart = botSectionOffTop - viewport.curScrTop;
+        var botPart = viewport.scrBottom - botSectionOffTop;
+        var topOpacity = parseFloat(topPart/viewport.height);
+        var botOpacity = parseFloat(botPart/viewport.height);
+        console.log("Top part: "+topPart+"; Bottom part: "+botPart);
+        setSectionBackgroundOpacity(viewport.topSection, topOpacity);
+        setSectionBackgroundOpacity(viewport.botSection, botOpacity);
     }
+    
+    //console.log(viewport);
+    
+    updatePrevViewport();    
 });
 
+function resetAllBackgroundsExceptVisible(){
+    for (sectionName in sectionsParameters){
+        var currentSection = sectionsParameters[sectionName];
+        if (viewport.botSection != sectionName && viewport.topSection != sectionName && viewport.ctrSection != sectionName){
+            setSectionBackgroundOpacity(sectionName, 0);
+        }
+    }
+}
+
+function setSectionBackgroundOpacity(sectionSelector, opacityValue){
+    var $background = getBackgroundForSection("div."+sectionSelector);
+    $background.css({
+        "opacity": parseFloat(opacityValue)
+    });
+}
+
+function updateViewport(){
+    viewport.curScrTop = $(window).scrollTop();
+    viewport.scrBottom = viewport.curScrTop + viewport.height;
+    viewport.scrCenter = viewport.curScrTop + viewport.height/2;
+    updateSectionsInViewport();
+}
+function updatePrevViewport(){
+    viewport.prevScrTop = $(window).scrollTop();
+}
+
+function updateSectionsInViewport(){
+    for (sectionName in sectionsParameters){
+        var currentSection = sectionsParameters[sectionName];
+        if (viewport.scrCenter > currentSection.offset_top && viewport.scrCenter < currentSection.offset_bot){
+            viewport.ctrSection = sectionName;
+        }
+        if (viewport.scrBottom > currentSection.offset_top && viewport.scrBottom < currentSection.offset_bot){
+            viewport.botSection = sectionName;
+        }
+        if (viewport.curScrTop > currentSection.offset_top && viewport.curScrTop < currentSection.offset_bot){
+            viewport.topSection = sectionName;
+        }
+    }
+}
+
+function getScrollDestination(){
+    return viewport.curScrTop - viewport.prevScrTop > 0 ? "down" : "up";
+}
+
 /*
- *  Для корректной работы этой функции необходимо,
- *  что бы специфичный для каждой секции класс находился
- *  на втором месте в перечне классов div'a
+ *  Для корректной работы функций initSectionsParameters и
+ *  getBackgroundForSection необходимо, чтобы специфичный 
+ *  для каждой секции класс находился на втором месте 
+ *  в перечне классов div'a
  *  
  */
 
-function getCurrentSection(){
-    
+function initSectionsParameters(){   
+    updateViewport();
+    var $sections = $("div.layout__item"),
+        i = 0;
+    for (i = 0; i <$sections.length; i++){
+        sectionsParameters[$($sections[i]).attr("class").split(" ")[1].toString()] = {
+            offset_top : $($sections[i]).offset().top,
+            offset_bot : $($sections[i]).offset().top + $($sections[i]).outerHeight(),
+            height : $($sections[i]).outerHeight(),
+            index : i
+        }
+    }
 }
 
-function getBackgroundForSection($section){
-    var backgroundName = $($section).attr("class").split(" ")[1];
-    backgroundName = "-"+backgroundName.replace("__layout", "");
-    console.log("backgroundName = "+backgroundName);
-    return $("div.layout__background."+backgroundName);
+function getBackgroundForSection(sectionSelector){
+    $section = $(sectionSelector);
+    var backgroundName = $($section).attr("class");
+    backgroundName = "-"+backgroundName.split(" ")[1];
+    backgroundName = "div.layout__background." + backgroundName.replace("__layout", "");
+    return $(backgroundName);
 }
