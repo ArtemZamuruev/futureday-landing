@@ -40,6 +40,12 @@ div.right_switcher{
     left: -1px;
 }
 
+div.right_switcher,
+div.left_switcher {
+    background-position: center;
+    background-size: 32px;
+}
+
 div.speaker__item{
     overflow: hidden;
 }
