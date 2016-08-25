@@ -22,7 +22,6 @@ function setAnchorPosition(sectionSelector, contentSelector){
         sof = parseFloat($(sectionSelector).offset().top),
         hh = parseFloat($("header.header").outerHeight()),
         anShift = 0;
-    console.log($content);
     if((cof-sof)+ch/2.0 > (vh+hh)/2.0){
         anShift = (vh + hh) / 2.0 - ch / 2.0 - (cof - sof);
         anShift = anShift * (-1);
@@ -31,7 +30,6 @@ function setAnchorPosition(sectionSelector, contentSelector){
         anShift = (cof-sof) + ch/2.0 - (vh + hh)/2.0;
     }
     
-    console.log($anchor.attr("name")+": "+anShift);
     $anchor.css({
        "top" : anShift
     });
