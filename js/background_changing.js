@@ -27,21 +27,23 @@ $(document).ready(initSectionsParameters);
 
 $(document).on("scroll", function(){
     updateViewport();
-    
     resetAllBackgroundsExceptVisible();
-    if (viewport.botSection != viewport.topSection){
-        var sectionParamSet = sectionsParameters[viewport.botSection];
-        var botSectionOffTop = sectionParamSet.offset_top;
-        var topPart = botSectionOffTop - viewport.curScrTop;
-        var botPart = viewport.scrBottom - botSectionOffTop;
-        var topOpacity = parseFloat(topPart/viewport.height);
-        var botOpacity = parseFloat(botPart/viewport.height);
-        console.log("Top part: "+topPart+"; Bottom part: "+botPart);
-        setSectionBackgroundOpacity(viewport.topSection, topOpacity);
-        setSectionBackgroundOpacity(viewport.botSection, botOpacity);
-    }
     
-    //console.log(viewport);
+//     console.log("top: "+viewport.topSection+"; center: "+viewport.ctrSection+"; bottom: "+viewport.botSection);
+//     if (viewport.botSection === viewport.ctrSection && viewport.ctrSection === viewport.topSection){
+//         console.log("Viewport is inside one section: "+viewport.ctrSection);
+//         updatePrevViewport();
+//         return;
+//     }
+    
+    //Handle top section:
+//     var opacityTop = parseFloat((sectionsParameters[viewport.topSection].offset_bot - viewport.curScrTop)/sectionsParameters[viewport.topSection].height);
+//     var opacityBottom = parseFloat((viewport.scrBottom - sectionsParameters[viewport.botSection].offset_bot)/sectionsParameters[viewport.botSection].height);
+//     var opacityCenter = parseFloat((viewport.scrCenter - sectionsParameters[viewport.ctrSection].offset_top)/(sectionsParameters[viewport.ctrSection].offset_bot - viewport.scrCenter));
+//     setSectionBackgroundOpacity(viewport.topSection, Math.abs(opacityTop));
+//     setSectionBackgroundOpacity(viewport.botSection, Math.abs(opacityBottom));
+//     setSectionBackgroundOpacity(viewport.ctrSection, Math.abs(opacityCenter));
+    
     
     updatePrevViewport();    
 });
@@ -63,6 +65,7 @@ function setSectionBackgroundOpacity(sectionSelector, opacityValue){
 }
 
 function updateViewport(){
+    viewport.height = $(window).height();
     viewport.curScrTop = $(window).scrollTop();
     viewport.scrBottom = viewport.curScrTop + viewport.height;
     viewport.scrCenter = viewport.curScrTop + viewport.height/2;
