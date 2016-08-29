@@ -13,7 +13,7 @@
   font-size: 30pt;
   position:relative;
   top: 16%;
-  left: 37%;
+  left: 36.5%;
 }
 
 .speakers__switcher div{
@@ -21,14 +21,14 @@
     background-size: contain;
     background-origin:content-box;
     padding:3px;
-    height:70px;
-    width:75px;
+    height:60px;
+    width:58px;
     display: inline-block;
     float: left;
     cursor: pointer;
     box-sizing:border-box;
-    border: 1px solid #FFF;
-    opacity: 0.75;
+    border: 1px solid #FFFEF7;
+    opacity: 0.45;
     transition: 150ms all ease-out;
 }
 
@@ -43,7 +43,7 @@ div.right_switcher{
 div.right_switcher,
 div.left_switcher {
     background-position: center;
-    background-size: 32px;
+    background-size: 25px 28px;
 }
 
 div.speaker__item{
