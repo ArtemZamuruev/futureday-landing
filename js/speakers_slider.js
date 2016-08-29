@@ -5,35 +5,40 @@
 * Time: 02:49 PM
 */
 
+var removeTurnedByUserFlagTimer;
+var automattedTurningTimer;
+
 $("div.left_switcher").click(function(){
-    $("div.speakers__items").addClass("-turned-by-user");
-    setTimeout(function(){
-        $("div.speakers__items").removeClass("-turned-by-user");
-    },10000);
+    setTurnedByUserFlag();
     turnRight();
 });
 $("div.right_switcher").click(function(){
-    $("div.speakers__items").addClass("-turned-by-user");
-    setTimeout(function(){
-        $("div.speakers__items").removeClass("-turned-by-user");
-    },10000);
+    setTurnedByUserFlag()
     turnLeft();
 });
 
+function setTurnedByUserFlag(){
+    $("div.speakers__items").addClass("-turned-by-user");
+    clearTimeout(removeTurnedByUserFlagTimer);
+    removeTurnedByUserFlagTimer = setTimeout(function(){
+        $("div.speakers__items").removeClass("-turned-by-user");
+        clearTimeout(automattedTurningTimer);
+    },10000);    
+}
 
 $(document).ready(function(){
      $("div.speaker__item").addClass("-destroyed");
     
-     var timerId = setTimeout(function tick() {
+     var automattedTurningTimer = setTimeout(function tick() {
          if(!$("div.speakers__items").hasClass("-turned-by-user")){
             turnLeft();
          }
-     timerId = setTimeout(tick, 15000);
+        automattedTurningTimer = setTimeout(tick, 15000);
      }, 15000);
 });
 
 
-const ANIMATION_DELAY = 500;
+const ANIMATION_DELAY = 1000;
 
 const IN_ANIMATION = "slideIn";
 const OUT_ANIMATION = "slideOut";
@@ -76,14 +81,19 @@ function turnRight(){
 
 
 function setPropertiesToCard(itemFrom, itemTo, dest){
+    
+    //Начать анимацию исчезания надписи и фотографии
     animateItemOut($("div.speaker__image", itemTo), dest);
     animateTextOut($("div.speaker__desc", itemTo));
+    
+    //По исчезновению фото и надписи изменить их CSS-свойства
     setTimeout(function(){
         $(".speaker__image", itemTo).css({"background-image": $(".speaker__image", itemFrom).css("background-image")});
         $(".speaker__name", itemTo).html($(".speaker__name", itemFrom).html());
         $(".speaker__role", itemTo).html($(".speaker__role", itemFrom).html());        
     }, ANIMATION_DELAY);
     
+    //Запустить анимацию появления фото и подписи
     setTimeout(function(){
         animateItemIn($("div.speaker__image", itemTo), dest);
         animateTextIn($("div.speaker__desc", itemTo));
@@ -91,21 +101,21 @@ function setPropertiesToCard(itemFrom, itemTo, dest){
 }
 function setPropertiesFromBuffer(itemTo, buffer, dest){
     
+    //Начать анимацию исчезания надписи и фотографии
     animateItemOut($("div.speaker__image", itemTo), dest);
     animateTextOut($("div.speaker__desc", itemTo));
-    animateTextOut($("div.speaker__desc.hiddenfix"));
+    
+    //По исчезновению фото и надписи изменить их CSS-свойства
     setTimeout(function(){
         $(".speaker__image", itemTo).css({"background-image" : buffer.imagesrc});
         $(".speaker__name", itemTo).html(buffer.name);
         $(".speaker__role", itemTo).html(buffer.role);
-        $("div.speaker__name","div.speaker__desc.hiddenfix").text($("div.speaker__name", "div.speaker__item:nth-child(5)").text());
-        $("div.speaker__role","div.speaker__desc.hiddenfix").text($("div.speaker__role", "div.speaker__item:nth-child(5)").text());
     }, ANIMATION_DELAY);
     
+    //Запустить анимацию появления фото и подписи
     setTimeout(function(){
         animateItemIn($("div.speaker__image", itemTo), dest);
         animateTextIn($("div.speaker__desc", itemTo));
-        animateTextIn($("div.speaker__desc.hiddenfix"));
     }, ANIMATION_DELAY);
     
 }

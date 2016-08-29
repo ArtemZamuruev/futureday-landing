@@ -84,12 +84,29 @@ div.speaker__item.-destroyed:nth-child(6){
     margin-right: -150px;
 }
 
+div.speaker__item{
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 1s;
+    animation-delay: 0s;
+    animation-duration: 1s;
+}
+
 div.speaker__item:nth-child(2) div.speaker__image,
 div.speaker__item:nth-child(2) div.speaker__image{
-    -webkit-animation-delay: 0.2s;
-    -webkit-animation-duration: 1s;
-    -moz-animation-delay: 0.2s;
-    -moz-animation-duration: 1s;
-    animation-delay: 0.2s;
-    animation-duration: 1s;
+    -webkit-animation-delay: 0.25s;
+    -webkit-animation-duration: 0.75s;
+    -moz-animation-delay: 0.25s;
+    -moz-animation-duration: 0.75s;
+    animation-delay: 0.25s;
+    animation-duration: 0.75s;
+}
+
+div.speaker__item div.speaker__image.slideOutRight,
+div.speaker__item div.speaker__image.slideOutLeft{
+    transition-property: all;
+    transition-delay: 0.65s;
+    transition-duration: 0.35s;
+    opacity: 0;
 }
