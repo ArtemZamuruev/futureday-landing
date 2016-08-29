@@ -10,9 +10,6 @@ body {
     transition: 300ms all ease-in-out;
 }
 
-
-
-
 div.layout__header{
     z-index: 20;
 }
@@ -66,6 +63,15 @@ div.popup__content.-visible{
     padding: 30px;
     padding-right: 20px;
     z-index: 15;
+}
+
+
+@media (max-width : 1024px ) {
+    div.popup__content.-visible{
+        width: 90%;
+        left: 5%;
+        max-height: 90%;
+    }
 }
 
 div.popup__container{
