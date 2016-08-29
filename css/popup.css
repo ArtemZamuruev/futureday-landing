@@ -66,13 +66,7 @@ div.popup__content.-visible{
 }
 
 
-@media (max-width : 1024px ) {
-    div.popup__content.-visible{
-        width: 90%;
-        left: 5%;
-        max-height: 90%;
-    }
-}
+
 
 div.popup__container{
     position: relative;
@@ -149,8 +143,8 @@ p.popup__speaker__description {
 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
     border-radius: 1px;
     background-color:  rgba(5, 5, 8, 0.1);
-    width: 11px;
-    height: 268px;
+    width: 10px;
+    height: 250px;
 }
 
 
@@ -158,6 +152,13 @@ p.popup__speaker__description {
 
 @media (max-width : 1024px){
     div.popup__content.-visible{
-        max-height: 1000%;
+        max-height: 100%;
+    }
+}
+@media (max-width : 1024px ) {
+    div.popup__content.-visible{
+        width: 90%;
+        left: 5%;
+        max-height: 90%;
     }
 }
