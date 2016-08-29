@@ -6,7 +6,7 @@
 * 
 */
 
-var sectionsParameters = {}
+var sectionsParameters = {};
 
 var viewport = {
     height: parseFloat($(window).height()),
@@ -20,7 +20,7 @@ var viewport = {
     topSection: "",
     ctrSection: "",
     botSection: ""
-}
+};
 
 
 $(document).ready(initSectionsParameters);
@@ -29,21 +29,13 @@ $(document).on("scroll", function(){
     updateViewport();
     resetAllBackgroundsExceptVisible();
     
-//     console.log("top: "+viewport.topSection+"; center: "+viewport.ctrSection+"; bottom: "+viewport.botSection);
-//     if (viewport.botSection === viewport.ctrSection && viewport.ctrSection === viewport.topSection){
-//         console.log("Viewport is inside one section: "+viewport.ctrSection);
-//         updatePrevViewport();
-//         return;
-//     }
-    
-    //Handle top section:
-//     var opacityTop = parseFloat((sectionsParameters[viewport.topSection].offset_bot - viewport.curScrTop)/sectionsParameters[viewport.topSection].height);
-//     var opacityBottom = parseFloat((viewport.scrBottom - sectionsParameters[viewport.botSection].offset_bot)/sectionsParameters[viewport.botSection].height);
-//     var opacityCenter = parseFloat((viewport.scrCenter - sectionsParameters[viewport.ctrSection].offset_top)/(sectionsParameters[viewport.ctrSection].offset_bot - viewport.scrCenter));
-//     setSectionBackgroundOpacity(viewport.topSection, Math.abs(opacityTop));
-//     setSectionBackgroundOpacity(viewport.botSection, Math.abs(opacityBottom));
-//     setSectionBackgroundOpacity(viewport.ctrSection, Math.abs(opacityCenter));
-    
+    //Настройка срабатывания переходов
+    //
+    //Должна быть здесь
+    //
+    //Но ее нет
+    //
+    //Потому что я использовал scrollmagic.io
     
     updatePrevViewport();    
 });
