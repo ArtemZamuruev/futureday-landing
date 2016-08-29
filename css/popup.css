@@ -144,12 +144,9 @@ p.popup__speaker__description {
     border-radius: 1px;
     background-color:  rgba(5, 5, 8, 0.1);
     width: 10px;
-    height: 250px;
 }
 
-
 /* Конец правок со скроллом */
-
 @media (max-width : 1024px){
     div.popup__content.-visible{
         max-height: 100%;

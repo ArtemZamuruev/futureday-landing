@@ -18,10 +18,10 @@ $("div.speaker__item").on("click", function(){
     $("div.popup__content").addClass("-visible");
       setTimeout(function(){
         $("div.popup__container").height(parseFloat($(window).height()*0.8)-60);
-        
+
         $(".popup__container").mCustomScrollbar({
              axis:"y",
-//              setHeight: $("div.popup__content").height()-60
+             setHeight: $("div.popup__content").height()-50 + " px"
          });
         }, 10);
 
