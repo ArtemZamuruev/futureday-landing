@@ -16,18 +16,16 @@ $("div.speaker__item").on("click", function(){
     $("div.popup__content").removeClass("-no-visible");
     $("div.popup__layout").addClass("-visible");  
     $("div.popup__content").addClass("-visible");
-      setTimeout(function(){
-//           $("div.popup__container").height(800);
-//           $("div.popup__container").height($("div.popup__content").height()-70);
-
-         $(".popup__container").mCustomScrollbar({
-             axis:"y",
-//              setHeight: $("div.popup__content").height()-60
-         });
-      }, 10);
-      $("div.popup__container").css({
+    
+    $("div.popup__container").css({
           "max-height" : parseFloat($(window).height()*0.8)-60 
       });
+      setTimeout(function(){
+         $(".popup__container").mCustomScrollbar({
+             axis:"y",
+             setHeight: $("div.popup__content").height()-80
+         });
+      }, 10);
 });
 
 $("div.popup__close__button").on("click", hidePopup);
