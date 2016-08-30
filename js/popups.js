@@ -17,15 +17,16 @@ $("div.speaker__item").on("click", function(){
     $("div.popup__layout").addClass("-visible");  
     $("div.popup__content").addClass("-visible");
     
-    $("div.popup__container").css({
-          "max-height" : parseFloat($(window).height()*0.8)-60 
-      });
-      setTimeout(function(){
-         $(".popup__container").mCustomScrollbar({
-             axis:"y",
-             setHeight: $("div.popup__content").height()-80
-         });
-      }, 10);
+    setTimeout(function(){
+        $("div.popup__container").css({
+            "max-height" : parseFloat($(window).height()*0.8)-60 
+        });
+
+        $(".popup__container").mCustomScrollbar({
+            axis:"y",
+            setHeight: $("div.popup__content").height()-50 + " px"
+        });
+    }, 10);
 });
 
 $("div.popup__close__button").on("click", hidePopup);

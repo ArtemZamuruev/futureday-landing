@@ -56,9 +56,10 @@ div.advantages__items{
 div.advantages__container{
     padding-top: 0px;
 }
-div.forwho{
+/* Частичная отмена правки 15 */
+/* div.forwho{
     margin-bottom: 0px;
-}
+} */
 div.forwho__content{
     padding-bottom: 0px;
     padding-top: 0px;

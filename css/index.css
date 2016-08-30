@@ -974,11 +974,11 @@ div.tickets__item:hover  div.buy:after{
 .layout__background.-speakers {
 
   background-color:  #0a0a0e;
-  background: -webkit-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-  background: -moz-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-  background: -o-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-  background: -ms-radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-  background: radial-gradient(circle 833px at 50%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -webkit-radial-gradient(circle 833px at 75%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -moz-radial-gradient(circle 833px at 75%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -o-radial-gradient(circle 833px at 75%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -ms-radial-gradient(circle 833px at 75%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: radial-gradient(circle 833px at 75%, rgba(74, 139, 184, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
 }
 .layout__background.-speakers .layout__cross {
   bottom: 200px;
@@ -1002,34 +1002,34 @@ div.tickets__item:hover  div.buy:after{
 }
 .layout__background.-forwho {
   background-color:  #0a0a0e;
-  background: -webkit-radial-gradient(circle 833px at 50%, rgba(40, 54, 152, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-  background: -moz-radial-gradient(circle 833px at 50%, rgba(40, 54, 152, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-  background: -o-radial-gradient(circle 833px at 50%, rgba(40, 54, 152, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-  background: -ms-radial-gradient(circle 833px at 50%, rgba(40, 54, 152, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
-  background: radial-gradient(circle 833px at 50%, rgba(40, 54, 152, 0.4) 0%, rgba(2, 0, 4, 0.4) 100%);
+  background: -webkit-radial-gradient(circle 833px at 75%, rgba(42, 58, 87, 1) 0%, rgba(13, 2, 16, 1) 100%);
+  background: -moz-radial-gradient(circle 833px at 75%, rgba(42, 58, 87, 1) 0%, rgba(13, 2, 16, 1) 100%);
+  background: -o-radial-gradient(circle 833px at 75%, rgba(42, 58, 87, 1) 0%, rgba(13, 2, 16, 1) 100%);
+  background: -ms-radial-gradient(circle 833px at 75%, rgba(42, 58, 87, 1) 0%, rgba(13, 2, 16, 1) 100%);
+  background: radial-gradient(circle 833px at 75%, rgba(42, 58, 87, 1) 0%, rgba(13, 2, 16, 1) 100%);
 }
 .layout__background.-advantages {
   background-color: #0a0a0e;
-  background-image: -webkit-radial-gradient(circle 861px at 74.27% 48.46%, rgba(65,73,80,0.58) 0%, rgba(2,0,4,0.58) 100%);
-  background-image: radial-gradient(circle 861px at 74.27% 48.46%, rgba(65,73,80,0.58) 0%, rgba(2,0,4,0.58) 100%);
+  background: -webkit-radial-gradient(circle 833px at 75% 40%, rgba(65,73,80,0.8) 0%, rgba(2,0,4,0.8) 100%);
+  background: radial-gradient(circle 833px at 75% 40%, rgba(65,73,80,0.8) 0%, rgba(2,0,4,0.8) 100%);
 }
 .layout__background.-shedule {
   background-color: #0a0a0e;
-  background-image: -webkit-radial-gradient(circle 1234px at 75.08% 30.2%, rgba(80,70,65,0.58) 0%, rgba(2,0,4,0.58) 100%);
-  background-image: radial-gradient(circle 1234px at 75.08% 30.2%, rgba(80,70,65,0.58) 0%, rgba(2,0,4,0.58) 100%);
+  background: -webkit-radial-gradient(circle 1200px at 75% 30%, rgba(80,70,65,0.8) 0%, rgba(2,0,4,0.8) 100%);
+  background: radial-gradient(circle 1200px at 75% 30%, rgba(80,70,65,0.8) 0%, rgba(2,0,4,0.8) 100%);
 }
 .layout__background.-tickets {
   background-color: #0a0a0e;
-  background-image: -webkit-radial-gradient(circle 861px at 74.27% 48.46%, rgba(65,73,80,0.58) 0%, rgba(2,0,4,0.58) 100%);
-  background-image: radial-gradient(circle 861px at 74.27% 48.46%, rgba(65,73,80,0.58) 0%, rgba(2,0,4,0.58) 100%);
+  background: -webkit-radial-gradient(circle 833px at 75% 40%, rgba(65,73,80,0.8) 0%, rgba(2,0,4,0.8) 100%);
+  background: radial-gradient(circle 833px at 75% 40%, rgba(65,73,80,0.8) 0%, rgba(2,0,4,0.8) 100%);
 }
 .layout__background.-place {
   background-color: #000;
 }
 .layout__background.-contacts {
   background-color: #000;
-  background-image: -webkit-radial-gradient(circle 879px at 74.27% 48.46%, rgba(65,73,80,0.58) 0%, rgba(2,0,4,0.58) 100%);
-  background-image: radial-gradient(circle 879px at 74.27% 48.46%, rgba(65,73,80,0.58) 0%, rgba(2,0,4,0.58) 100%);
+  background-image: -webkit-radial-gradient(circle 833px at 75% 40%, rgba(65,73,80,0.8) 0%, rgba(2,0,4,0.8) 100%);
+  background-image: radial-gradient(circle 833px at 75% 40%, rgba(65,73,80,0.8) 0%, rgba(2,0,4,0.8) 100%);
 }
 .layout__background.-contacts:before {
   content: "";
