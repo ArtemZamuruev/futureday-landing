@@ -183,3 +183,9 @@ div.layout__item:nth-child(8) > a{
     top: -60px;
 }
 
+/* Правка 35 */
+div.place__address{
+    margin-left: 30px;
+    margin-right: 70px;
+    margin-top: 250px;
+}
