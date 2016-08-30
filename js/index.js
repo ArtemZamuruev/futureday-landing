@@ -5830,10 +5830,6 @@ $(window).on('scroll', function() {
             var target = $(this).find('a[name]').attr('name'),
                 $item = $('a[href="#' + target + '"]'),
                 $active = $(".-js-selected");
-            var activeBG = $(".layout__backgrounds .-js-active");
-            var nextBG = $(".layout__backgrounds .-" + target + "");
-            //activeBG.removeClass("-js-active");
-            //nextBG.addClass("-js-active");
             $active.removeClass('-js-selected');
             $item.addClass('-js-selected');
 

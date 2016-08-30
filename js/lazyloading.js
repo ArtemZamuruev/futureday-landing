@@ -80,7 +80,7 @@ $(document).ready(function(){
 
     setTimeout(function(){
         
-        $("div.layout__background.-intro").addClass("-js-active");
+//         $("div.layout__background.-intro").addClass("-js-active");
         $("div.intro__day").addClass("-sliced");
         setTimeout(function(){
             $(".intro__header").addClass("-sliced");

@@ -962,9 +962,6 @@ div.tickets__item:hover  div.buy:after{
   height: 100%;
   opacity: 0;
 }
-.layout__background.-js-active {
-    opacity: 1;
-}
 .layout__background.-intro {
   background-image: url("../images/back_1.jpg");
   background-position: center center;
