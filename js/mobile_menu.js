@@ -3,7 +3,6 @@
 * User: ArtemZamuruev
 * Date: 2016-07-29
 * Time: 03:30 PM
-* To change this template use Tools | Templates.
 */
 
 $(document).on("click", "div.mobile__menu__icon", function(){

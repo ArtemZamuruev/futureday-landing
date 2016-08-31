@@ -3,8 +3,6 @@
     Created on : 2016-07-29 03:26 PM
     Author     : ArtemZamuruev
     Description:
-    Purpose of the stylesheet follows.
-    To change this template use Tools | Templates.
 */
 
 .mobile__menu__icon{
@@ -14,30 +12,7 @@ div.current__menu__indicator{
     display: none;
 }
 
-
-@media ( max-width : 1024px ){
-    
-    
-    /* Mobile intro date position fix */
-    .header{
-        color: rgb(255, 255, 255);
-    }
-    .intro__day{
-        top: -100px;
-    }
-    
-    .intro__header,
-    .intro__label,
-    .intro__desc{
-        top: 0px; 
-    }
-    
-    .header__buy{
-        display: none;
-        right: 80px;
-        top: -10px;
-    }
-    /* End of the fix */
+@media ( max-width : 1024px ){    
     
     /* Responsive form fix  */
     .form{
