@@ -15,17 +15,6 @@ div.current__menu__indicator{
 @media ( max-width : 1024px ){    
     
     /* Responsive form fix  */
-    .form{
-        display: block;
-    }
-    .form__item{
-        width: 200px;
-        margin: auto;
-        margin-top: 30px;
-    }
-    .form__item:last-child{
-        text-align: center;
-    }
     /* End of the fix */
     
     .layout__header div.menu{
@@ -99,7 +88,7 @@ div.current__menu__indicator{
         position: absolute;
         top: 20px;
         right: 100px;
-        border-bottom: 4px solid #e01acb;
+/*         border-bottom: 4px solid #e01acb; */
         color: #e01acb;
         text-transform: uppercase;
         text-align: right;

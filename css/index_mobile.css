@@ -108,7 +108,7 @@ Description:
  *    @media  max-width: 1024px
  */
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px){
 
     /* Mobile intro date position fix */
     .header{
@@ -166,14 +166,11 @@ Description:
     .speakers__items {
         margin: 0 -52px;
     }
-    /* Archie addition to Switcher */
     div.speakers__switcher{
         position: relative;
         left: 75%;
         top: 460px;
     } 
-    /* End of additions */
-
     .speaker__name {
         font-size: 30px;
         line-height: 35px;
@@ -280,6 +277,96 @@ Description:
         padding-left: 52px;
         padding-right: 52px;
     }
+    .form{
+        display: block;
+    }
+    .form__item{
+        width: 200px;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .form__item:last-child{
+        text-align: center;
+    }
+    
+    /*  Place layout   */
+    div.place__layout div.place__rumble{
+        display:none;
+    }
+    div.place__layout div.place__map{
+        width:100%;
+        right: 0;
+        margin: 0;
+    }
+    div.place__layout div.place__date{
+        left: 0;
+        margin:0;
+    }
+    
+    div.place__layout div.place__date div.day__wrap{
+        top: 20px;
+        bottom: 0;
+        left: 100px;
+    }
+    
+    div.place__layout div.place__image{
+        top: 230px;
+        left: 75px;
+    }
+    div.place__layout div.place__image img{
+        width:230px;
+        height: 185px;
+    }
+    
+    
+/*  Contacts layout    */
+    div.contacts{
+        padding-bottom: 160px;
+    }
+    
+    div.contacts__label{
+        width: 90%;
+    }
+    
+    div.contacts__rules{
+        width: 75%;
+        font-size: 15px;
+        margin: auto;
+        margin-top: 30px;
+    }
+    
+    
+    div.form__item{
+        width: 75%;
+    }
+    div.form__item input{
+        width: 100%;
+        height: 50px;
+    }
+    
+    div.contacts__more{
+        width: 70%;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    
+    div.contacts__item--type_name{
+        width: 100%;
+        position: relative;
+        top: -40px;
+        left: 35%;
+    }
+    div.contacts__item--type_phone{
+        width: 100%;
+        position: relative;
+        left: -15%;
+    }
+    div.contacts__item--type_mail{
+        width: 100%;
+        position: relative;
+        left: -15%;
+    }
+    
 }
 
 /*  
@@ -288,13 +375,23 @@ Description:
 
 @media (max-width: 768px) {
     
+/*   Common   */
     html,
     body {
         font-size: 21px;
         line-height: 25px;
     }
+    div.layout__content{
+        padding: 0px 52px;
+    }
+    
+    
+/* Header */
+    div.layout__header{
+        height: 90px;
+    }
     .header {
-        padding-top: 37px;
+        padding-top: 52px;
     }
     .header.-js-inner {
         padding-top: 0;
@@ -316,6 +413,8 @@ Description:
         width: 68px;
         height: 64px;
     }
+    
+/* Intro Layout */
     .intro {
         padding: 0;
     }
@@ -324,11 +423,14 @@ Description:
     }
     .intro__wrap {
         padding-left: 0;
-        margin-top: 10px;
+/*         margin-top: 10px; */
+        margin: 0px;
+        top: -80px;
     }
-    .intro__day {
+    div.intro__day {
         right: auto;
         left: 0;
+        top: 0;
     }
     .intro__label {
         display: none;
@@ -342,6 +444,7 @@ Description:
         font-size: 107px;
         letter-spacing: 0.035em;
         margin-left: 170px;
+        max-width: 50%;
     }
     .buy--size_big:after {
         height: 10px;
@@ -356,9 +459,13 @@ Description:
     .day__mount {
         margin-left: 0;
     }
+    
+/*   Speakers Layout   */
     .speakers__content {
         padding-bottom: 56px;
     }
+    
+/* ForWho Layout */
     .forwho {
         margin-bottom: 0;
     }
@@ -383,6 +490,19 @@ Description:
     .forwho__wrap {
         margin-bottom: 0;
     }
+    
+    
+    div.forwho__main div.forwho__label,
+    div.forwho__main div.forwho__header,
+    div.forwho__main div.forwho__text {
+      margin-left: 10%;
+    }
+    div.forwho__main-item:nth-child(1) div.forwho__icon{
+        left: -50px;
+    }
+    
+    
+/* Advantages Layout */
     .advantages__items {
         margin-left: -52px;
     }
@@ -458,6 +578,8 @@ Description:
     .advantages__item:nth-child(3) .advantages__image:nth-child(2) {
         margin: -75px 0 0 110px;
     }
+    
+/* Shedule Layout */
     .shedule__icons {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -508,6 +630,11 @@ Description:
         height: 55px;
         margin: -31px 0 0 -60px;
     }
+    div.shedule__header{
+        width: 90%;
+    }
+    
+/* Tickets Layout */
     .tickets__content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -553,5 +680,86 @@ Description:
     }
     .tickets__price {
         font-size: 45px;
+    }
+    
+/*  Place layout   */
+    div.place__layout div.place__rumble{
+        display:none;
+    }
+    div.place__layout div.place__map{
+        width:100%;
+        right: 0;
+        margin: 0;
+    }
+    div.place__layout div.place__date{
+        left: 0;
+        margin:0;
+    }
+    
+    div.place__layout div.place__date div.day__wrap{
+        top: 20px;
+        bottom: 0;
+        left: 100px;
+    }
+    div.place__layout div.place__address{
+        margin-top: 265px;
+    }
+    
+    div.place__layout div.place__image{
+        top: 230px;
+        left: 75px;
+    }
+    div.place__layout div.place__image img{
+        width:230px;
+        height: 185px;
+    }
+    
+    
+/*  Contacts layout    */
+    div.contacts{
+        padding-bottom: 160px;
+    }
+    
+    div.contacts__label{
+        width: 90%;
+    }
+    
+    div.contacts__rules{
+        width: 75%;
+        font-size: 15px;
+        margin: auto;
+        margin-top: 30px;
+    }
+    
+    
+    div.form__item{
+        width: 75%;
+    }
+    div.form__item input{
+        width: 100%;
+        height: 50px;
+    }
+    
+    div.contacts__more{
+        width: 70%;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    
+    div.contacts__item--type_name{
+        width: 100%;
+        position: relative;
+        top: -40px;
+        left: 35%;
+    }
+    div.contacts__item--type_phone{
+        width: 100%;
+        position: relative;
+        left: -15%;
+    }
+    div.contacts__item--type_mail{
+        width: 100%;
+        position: relative;
+        left: -15%;
     }
 }

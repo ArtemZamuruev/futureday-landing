@@ -1138,6 +1138,12 @@ div.tickets__item:hover  div.buy:after{
   position: relative;
   float: left;
 }
+
+div.place__image img{
+    width: 400px;
+    height: 325px;
+}
+
 .place__rumble {
   width: 148px;
   height: 148px;
