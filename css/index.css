@@ -325,6 +325,11 @@ div.tickets__item:hover  div.buy:after{
   color: #fff;
   text-decoration: none;
 }
+
+div.contacts__buy{
+    display: none;
+}
+
 .day {
   margin-right: 120px;
   zoom: 1;
@@ -1848,4 +1853,8 @@ b {
 
 .forwho__text {
   max-width:  550px;
+}
+
+div.footer__social.-intro-social{
+    display: none;
 }

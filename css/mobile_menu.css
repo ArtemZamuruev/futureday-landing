@@ -14,9 +14,6 @@ div.current__menu__indicator{
 
 @media ( max-width : 1024px ){    
     
-    /* Responsive form fix  */
-    /* End of the fix */
-    
     .layout__header div.menu{
         opacity: 0;
     }
@@ -42,7 +39,7 @@ div.current__menu__indicator{
         right: 20px;
         height: 40px;
         width: 40px;
-        background-image: url("../content/hamburger-icon.png");
+        background-image: url("../images/burger-imenu-icon.png");
         background-size: cover;
     }
     
@@ -88,7 +85,6 @@ div.current__menu__indicator{
         position: absolute;
         top: 20px;
         right: 100px;
-/*         border-bottom: 4px solid #e01acb; */
         color: #e01acb;
         text-transform: uppercase;
         text-align: right;

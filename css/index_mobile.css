@@ -345,9 +345,11 @@ Description:
     }
     
     div.contacts__more{
-        width: 70%;
+        width: 90%;
         margin-bottom: 50px;
         margin-top: 50px;
+        font-weight:400;
+        font-size:20px;
     }
     
     div.contacts__item--type_name{
@@ -365,6 +367,23 @@ Description:
         width: 100%;
         position: relative;
         left: -15%;
+    }
+    
+    
+    div.advantages__content p{
+    }
+    
+    div.contacts__buy{
+        display: block;
+        width:220px;
+        margin: 70px auto;
+        text-align: center;
+    }
+    
+    div.contacts__buy div.buy__value{
+        font-size: 36px;
+        line-height: 40px;
+        text-align: center;
     }
     
 }
