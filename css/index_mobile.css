@@ -373,18 +373,7 @@ Description:
     div.advantages__content p{
     }
     
-    div.contacts__buy{
-        display: block;
-        width:220px;
-        margin: 70px auto;
-        text-align: center;
-    }
-    
-    div.contacts__buy div.buy__value{
-        font-size: 36px;
-        line-height: 40px;
-        text-align: center;
-    }
+
     
 }
 

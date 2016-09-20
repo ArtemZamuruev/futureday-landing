@@ -7,6 +7,37 @@
     To change this template use Tools | Templates.
 */
 
+/* ------------------------------------------------------------- */
+/* ----Перенос из index.html размеров изображений--------- */
+/* -------------------------------------------------------------- */
+
+div.advantages__item:nth-child(1) div.advantages__image:nth-child(1) img{
+    width: 126px;
+    height: 123px;
+}
+div.advantages__item:nth-child(1) div.advantages__image:nth-child(2) img{
+    width: 207px;
+    height: 207px;
+}
+div.advantages__item:nth-child(1) div.advantages__image:nth-child(3) img{
+    width: 126px;
+    height: 123px;
+}
+div.advantages__item:nth-child(2) div.advantages__image img{
+    width: 227px;
+    height: 175px;
+}
+div.advantages__item:nth-child(3) div.advantages__image:nth-child(1) img{
+    width: 231px;
+    height: 232px;
+}
+div.advantages__item:nth-child(3) div.advantages__image:nth-child(2) img{
+    width: 126px;
+    height: 123px;
+}
+/* ------------------------------------------------------------- */
+
+
 div.layout__content--type_inner{
     padding: 10px 60px;
 }

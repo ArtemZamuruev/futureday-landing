@@ -30,6 +30,8 @@
     border: 1px solid #FFFEF7;
     opacity: 0.45;
     transition: 150ms all ease-out;
+    background-position: center;
+    background-size: 25px 28px;
 }
 
 .speakers__switcher div:hover{
@@ -38,12 +40,6 @@
 div.right_switcher{
     position: relative;
     left: -1px;
-}
-
-div.right_switcher,
-div.left_switcher {
-    background-position: center;
-    background-size: 25px 28px;
 }
 
 div.speaker__item{
