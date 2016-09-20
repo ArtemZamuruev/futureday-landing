@@ -5713,6 +5713,9 @@ $.extend($.validator.messages, {
         }
     }, globals.watchInterval);
 });
+
+
+
 var $forWho_items = $(".forwho__menu-item");
 var transitionEnd = 'webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd';
 $forWho_items.on('click', function() {
@@ -5741,6 +5744,43 @@ $forWho_items.on('click', function() {
     $this.addClass('-js-active');
     $target.addClass('-js-active');
 });
+
+/*-------------------------------------------
+ * ForWho-слайдер для мобильной версии    |
+ * ------------------------------------------
+ */
+var sliderNext = {
+    "company": "investors",
+    "investors":"professionals",
+    "professionals": "scient",
+    "scient":"edition",
+    "edition":"company"
+};
+var $forWho_items = $("div.forwho__main-item");
+$forWho_items.on('click', function() {
+    
+    //Prevent fucntion if not mobile
+    if($(window).width()>=1024){
+        console.log("Return on desktops");
+        return;
+    }
+    
+    var $this = $(this),
+        currentSliderName = $(this).attr("data-slider-name"),
+        $active = $(".-js-active[data-slider-target]"),
+        $currentSlide = $(".forwho__main-item.-js-active"),
+        $target = $("[data-slider-name=\"" + sliderNext[currentSliderName] + "\"]");
+    console.log("Current slider name:" + currentSliderName);
+    console.log("Next slider name:"+sliderNext[currentSliderName]);
+    $active.removeClass('-js-active');
+    $currentSlide.addClass('-js-out');
+     $currentSlide.on(transitionEnd, function() {
+         $currentSlide.removeClass('-js-out').off(transitionEnd);
+     });
+    $currentSlide.removeClass('-js-active');
+    $target.addClass('-js-active');
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
         var layout = document.querySelector(".layout");
