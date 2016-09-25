@@ -74,13 +74,9 @@ function itemsBuild(itemsSelector){
  */
 $(document).ready(function(){
 
-//  new WOW().init();
-
     scrollTo(0, $("body").height);
 
     setTimeout(function(){
-        
-//         $("div.layout__background.-intro").addClass("-js-active");
         $("div.intro__day").addClass("-sliced");
         setTimeout(function(){
             $(".intro__header").addClass("-sliced");

@@ -8,8 +8,8 @@
 */
 
 /* ------------------------------------------------------------- */
-/* ----Перенос из index.html размеров изображений--------- */
-/* -------------------------------------------------------------- */
+/* ----Перенос из index.html размеров изображений------- - */
+/* ------------------------------------------------------------- */
 
 div.advantages__item:nth-child(1) div.advantages__image:nth-child(1) img{
     width: 126px;
@@ -219,4 +219,16 @@ div.place__address{
     margin-left: 30px;
     margin-right: 70px;
     margin-top: 250px;
+}
+
+
+/* Прячем лого в меню для мобильных */
+div.mobile__menu__logo{
+    display: none;
+}
+div.mobile__menu__close{
+    display: none;
+}
+div.mobile__menu__buy{
+    display: none;
 }

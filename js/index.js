@@ -5770,14 +5770,16 @@ $forWho_items.on('click', function() {
         $active = $(".-js-active[data-slider-target]"),
         $currentSlide = $(".forwho__main-item.-js-active"),
         $target = $("[data-slider-name=\"" + sliderNext[currentSliderName] + "\"]");
-    console.log("Current slider name:" + currentSliderName);
-    console.log("Next slider name:"+sliderNext[currentSliderName]);
-    $active.removeClass('-js-active');
+//     Debug messages for slider 
+//     
+//     console.log("Current slider name:" + currentSliderName);
+//     console.log("Next slider name:"+sliderNext[currentSliderName]);
+    
+    $currentSlide.removeClass('-js-active');
     $currentSlide.addClass('-js-out');
      $currentSlide.on(transitionEnd, function() {
          $currentSlide.removeClass('-js-out').off(transitionEnd);
-     });
-    $currentSlide.removeClass('-js-active');
+     }); 
     $target.addClass('-js-active');
 });
 
@@ -5866,16 +5868,22 @@ $(window).on('scroll', function() {
         $blocks = $(".layout__item"),
         windowHeight = $(window).height();
     $blocks.each(function() { 
-        if (currentTop+windowHeight*0.3 >= $(this).offset().top && currentTop+windowHeight*0.7 <= $(this).offset().top+$(this).height()){
+        if (currentTop+windowHeight*0. >= $(this).offset().top && currentTop+windowHeight*0.7 <= $(this).offset().top+$(this).height()){
             var target = $(this).find('a[name]').attr('name'),
                 $item = $('a[href="#' + target + '"]'),
                 $active = $(".-js-selected");
             $active.removeClass('-js-selected');
             $item.addClass('-js-selected');
-
-            prevTarget = target;
             
-            mobileMenuIndication();
+            
+            
+            $("div.current__menu__indicator").text($("a.menu__link.-js-selected").text());
+            
+            
+
+//             prevTarget = target;
+            
+//             mobileMenuIndication();
         }
     });
 });

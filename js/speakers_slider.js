@@ -27,14 +27,20 @@ function setTurnedByUserFlag(){
 }
 
 $(document).ready(function(){
-     $("div.speaker__item").addClass("-destroyed");
+    let windowWidth = $(window).width();
     
-     var automattedTurningTimer = setTimeout(function tick() {
-         if(!$("div.speakers__items").hasClass("-turned-by-user")){
+    if(windowWidth <= 1024){
+        setSizes(windowWidth);
+    }
+    
+    $("div.speaker__item").addClass("-destroyed");
+
+    var automattedTurningTimer = setTimeout(function tick() {
+        if(!$("div.speakers__items").hasClass("-turned-by-user")){
             turnLeft();
-         }
+        }
         automattedTurningTimer = setTimeout(tick, 15000);
-     }, 15000);
+    }, 15000);
 });
 
 
@@ -154,4 +160,50 @@ function animateTextOut(item){
 function animateTextIn(item){
     $(item).removeClass(TEXT_OUT_ANIMATION);
     $(item).addClass(TEXT_IN_ANIMATION);
+}
+
+
+
+function setSizes(wdth){
+    //Make screen-relative sizes of images  
+    let props = {
+        0: {
+            w_per: 0,
+            W_to_H: 0
+        },
+        1: {
+            w_per: 0.661,
+            W_to_H: 1.2225
+        },
+        2: {
+            w_per: 0.453,
+            W_to_H: 0.8554
+        },
+        3: {
+            w_per: 0.309,
+            W_to_H: 1.2222
+        },
+        4: {
+            w_per: 0.286,
+            W_to_H: 1.1582
+        },
+        5: {
+            w_per: 0,
+            W_to_H: 0
+        }
+    }
+    var skr_item_images = $("div.speaker__item div.speaker__image");
+    console.log(skr_item_images);
+    for (var i = 1; i < skr_item_images.length; i++){
+        var $curImage = skr_item_images[i];
+        var newWidth = parseFloat(wdth*props[i].w_per);
+        var newHeight = parseFloat(newWidth / props[i].W_to_H);
+        $($curImage).css({
+            "width" : newWidth+"px",
+            "height": newHeight+"px"
+        });
+    }
+    $("div.speakers__switcher").offset({
+        "left": $("div.speaker__item:nth-child(5) div.speaker__image").offset().left
+    });
 }

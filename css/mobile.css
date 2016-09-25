@@ -18,21 +18,171 @@
     }
     
 /* Header */
-    
+       
+    /*  div.layout__header    */
     div.layout__header.-sliced{
         height: 90px;
     }
-    header.header div.header__logo{
-        height: auto;
-        top: 52px;
-        left: 52px;
+    div.layout__header{
+        height: 70px;
+    } 
+        /*header.header*/
+        header.header.-js-inner{
+            background-color: rgba(0,0,0, 0.85);
+            box-shadow: 2.5px 4.3px 90px rgba(1,1,1,.9);
+        }
+    
+            /*  div.header__logo    */
+            header.header div.header__logo{
+                height: auto;
+                top: 52px;
+                left: 52px;
+            }
+            header.header.-js-inner div.header__logo{
+                top:20px;   
+            }
+    
+                /*  logo__image    */
+                header.header div.logo__image svg{
+                    width: 68px;
+                    height: 64px;
+                }
+                header.header.-js-inner div.logo__image svg{
+                    width: 53px;
+                    height: 49px;
+                }
+        
+                /*   div.logo__content   */
+                header.header div.logo__content{
+                    display: none;
+                }
+    
+                /*   div.header__menu   */
+                div.layout__header div.menu{
+                    position : absolute;
+                    width: 100%;
+                    height: 100vh;
+                    font-size: 1.7em;
+                    top: 0px;
+                    left: 0px;
+                    background-color: #0d0c19;
+                    padding-top: 52px;
+                    font-size: 30px;
+                    line-height: 35px;
+                    z-index: 100;
+                }
+                div.layout__header div.menu{
+                    opacity: 0;
+                }
+                
+                    /*div.mobile__menu__logo*/
+                    div.mobile__menu__logo{
+                        display: block;
+                        z-index: 101;
+                        margin-left: 52px;
+                        width: 240px; 
+                        float: left;
+                    }
+                        /*div.mobile__logo__image*/
+                        div.mobile__menu__logo div.mobile__logo__image{
+                            width: 53px;
+                            float:left;
+                        }
+                                /*.logo__line*/
+                                header.header div.mobile__menu__logo .logo__line{
+                                    stroke: #fffef7;
+                                }
+                                header.header.-js-inner div.mobile__menu__logo .logo__line{
+                                    stroke: #fffef7;
+                                }
+                        /*div.mobile__logo__content*/
+                        div.mobile__logo__content{
+                            font: 700 19px/26px kelson;
+                            text-transform: uppercase;
+                            color: #fffef7;
+                            float: left;
+                            margin-left: 10px;
+                        }
+                    
+                    /*div.menu__item*/
+                    div.layout__header div.menu__item{
+                        display: block;
+                        width: 260px;
+                        text-align: center;
+                        margin: 40px auto;
+                        color: #fffef7;
+                    }
+
+                    div.layout__header div.menu__item:nth-child(3){
+                        margin-top: 30%;
+                    }
+                        /*.header.-js-inner .menu__link:hover*/
+                        header.header.-js-inner a.menu__link:hover{
+                            color:#e01acb;
+                        }
+    
+    /*div.mobile__menu__close*/
+    div.mobile__menu__close{
+        display: initial;
+        float: right;
+        position: relative;
+        margin-right: 52px;
+        top: 15px;
+        width:75px;
+        height:75px;
     }
-    header.header div.logo__image svg{
-        width: 68px;
-        height: 64px;
+        /*div.mobile__close__icon*/
+        div.mobile__close__icon{
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/menu-close-icon.png);
+            float: right;
+        }
+    
+    div.mobile__menu__buy{
+        display: initial;
+        width: 40%;
+        position: absolute;
+        left: 30%;
+        bottom: 150px;
+        text-align: center;
     }
-    header.header div.logo__content{
-        display: none;
+    
+    div.mobile__menu__buy div.buy__value{
+        font-size: 36px;
+        line-height: 52px;
+    }
+    
+    
+    /*  div.current__menu__indicator    */
+    div.current__menu__indicator{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 100px;
+        color: #e01acb;
+        text-transform: uppercase;
+        text-align: right;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 25px;
+        top: 63px;
+    }
+    header.header.-js-inner div.current__menu__indicator{
+        top: 33px;
+    }
+    
+    /*  div.mobile__menu__icon    */
+    div.mobile__menu__icon{
+        display: block;
+        position: absolute;
+        font-size: 2em;
+        top: 15px;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        background-image: url("../images/burger-imenu-icon.png");
+        background-size: cover;
     }
     header.header div.mobile__menu__icon{
         height: 27px;
@@ -40,26 +190,19 @@
         top: 65px;
         right: 52px;
     }
+    header.header.-js-inner div.mobile__menu__icon{
+        top:32px;
+    }
+    div.mobile__menu__icon a{
+        text-decoration: none;
+        color: #fffef7;
+    }
+    
+    /*  div.header__buy    */
     header.header div.header__buy{
         display: none;
     }
     
-    header.header.-js-inner div.header__logo{
-        top:20px;   
-    }
-    header.header.-js-inner div.logo__image svg{
-        width: 53px;
-        height: 49px;
-    }
-    header.header.-js-inner div.mobile__menu__icon{
-        top:32px;
-    }
-    div.current__menu__indicator{
-        font-size: 21px;
-        line-height: 25px;
-        top: 33px;
-        font-weight: 400;
-    }
     
 /* Intro layout */
     div.intro{
@@ -70,7 +213,7 @@
         align-items: initial;
     }
     div.intro__wrap{
-        margin-top: 120px;
+        margin-top: 150px;
     }
     h1.intro__header{
         width: 60%;
@@ -88,15 +231,18 @@
     }
     div.intro__day.-sliced{
         left: 0px;
+        top: 10px;
     }
     div.day__digit{
         font-size: 152px;
         line-height: 90px;
+        position: relative;
+        left: -20px;
     }
     div.day__mount{
         font-size: 24px;
         line-height: 24px;
-        margin-top: 32px;
+        margin-top: 30px;
         margin-left: 0;
     }
     div.day__year{
@@ -115,9 +261,15 @@
         font-size: 36px;
         line-height: 50px;
     }
+    div.intro__buy div.buy:after{
+        left: initial;
+        width: 100%;
+        
+    }
+    
     div.footer__social.-intro-social{
         display: initial;
-        margin-top: 100px;
+        margin-top: 120px;
         margin-right: 0px;
         text-align: right;
     }
@@ -134,7 +286,7 @@
     
 /* Speakers layout */
     div.speakers{
-        height: 1350px;
+        height: 1500px;
     }
     div.speakers__container{
         position: absolute;
@@ -142,16 +294,22 @@
         padding: 0;
         margin: 0;
     }
+    h2.speakers__header{
+        max-width: 70%;
+        font-size: 34px;
+        line-height: 42px;
+    }
     p.speakers__desc{
-        font-size: 24px;
-        line-height: 34px;
-        max-width: 520px;
+        font-size: 27px;
+        line-height: 37px;
+        max-width: 80%;
     }
     
     div.speakers__items{
         position: relative;
-        top:440px;
+        top:500px;
         margin:0;
+        margin-top: 40px;
     }
     
     div.speaker__name{
@@ -172,12 +330,12 @@
     }
     div.speaker__item:nth-child(2) div.speaker__desc{
         margin-left:52px;
-        margin-top:25px;
+        margin-top:40px;
     }
     div.speaker__item:nth-child(3){
         left:initial;
         right: 0px;
-        top: 410px;
+        top: 500px;
         margin: 0;
     }
     div.speaker__item:nth-child(3) div.speaker__image{
@@ -187,7 +345,7 @@
     div.speaker__item:nth-child(4){
         left: 0;
         margin: 0;
-        top: 480px;
+        top: 580px;
     }
     div.speaker__item:nth-child(4) div.speaker__image{
         opacity: 1;
@@ -206,10 +364,11 @@
     }
     
     div.speakers__switcher{
-        top:490px;
+        top:550px;
         left:initial;
         right: 36px;
         position: absolute;
+        margin-top: 40px;
     }
     div.speakers__switcher div{
         width: 75px;
@@ -219,20 +378,29 @@
     
 /* ForWho layout */
     
+    div.forwho{
+        margin-top: 180px;
+    }
+    
     div.forwho__label{
         margin-top: 50px;
-        font-size: 18px;
-        line-height: 33px;
+        font-size: 25px;
+        line-height: 40px;
     }
     div.forwho__text{
-        font-size: 21px;
-        line-height: 27px;
+        font-size: 25px;
+        line-height: 30px;
     }
-    div.forwho__main-item:nth-child(1){
+    div.forwho__main-item{
         margin-left: 100px;
         width:80%;
         
     }
+    
+    div.forwho__main-item:nth-child(3){
+        margin-left: 10px;
+    }
+    
     div.forwho__main-item:nth-child(1) div.forwho__icon{
         top: -35px;
         left: -150px;
@@ -242,12 +410,14 @@
     }
     div.forwho__main-item:nth-child(3) div.forwho__icon{
         left: -100px;
+        left: 0;
     }
     div.forwho__main-item:nth-child(4) div.forwho__icon{
         left: -150px;
     }
     div.forwho__main-item:nth-child(5) div.forwho__icon{
         left: 140px;
+        left: -140px;
         top: 100px;
     }
 
@@ -257,8 +427,8 @@
         left: -52px;
     }
     div.advantages__content p{
-        font-size: 21px;
-        line-height: 27px;
+        font-size: 24px;
+        line-height: 30px;
     }
     div.advantages__item:nth-child(1) div.advantages__content{
         margin-left: 30px;
@@ -373,9 +543,22 @@
         width:136px!important;
         height: 141px!important;
     }
+    div.shedule__icon-wrap:nth-child(2) div.shedule__icon-front div.shedule__icon-back{
+        width: 40px;
+        height: 40px;
+        top:35px;
+        left:55px;
+        border-width: 35px;
+    }
     div.shedule__icon-wrap:nth-child(3) div.shedule__icon-front svg{
         width:164px!important;
         height: 109px!important;
+    }
+    div.shedule__icon-wrap:nth-child(3) div.shedule__icon-front div.shedule__icon-back{
+        width: 150px;
+        height: 55px;
+        top:40px;
+        left:63px;
     }
     
     
@@ -452,7 +635,6 @@
         margin:0;
         top: 40px;
     }
-    
     div.place__layout div.place__date div.day__wrap{
         top: -10px;
         bottom: 0;
@@ -462,10 +644,10 @@
     div.place__layout div.place__address{
         margin-top: 205px;
     }
-    
     div.place__layout div.place__image{
-        top: 180px;
-        left: 75px;
+        position:absolute;
+        right: -52px;
+        bottom: -25px;
     }
     div.place__layout div.place__image img{
         width:230px;
@@ -493,6 +675,23 @@
         font-size: 24px;
         line-height: 26px;
     } 
+    
+    div.form__item input[type='text']::-webkit-input-placeholder{
+        font-size: 24px;
+        line-height: 26px;
+    }
+    div.form__item input[type='text']:-moz-placeholder{
+        font-size: 24px;
+        line-height: 26px;        
+    }
+    div.form__item input[type='text']::-moz-placeholder{
+        font-size: 24px;
+        line-height: 26px;        
+    }
+    div.form__item input[type='text']:-ms-input-placeholder{
+        font-size: 24px;
+        line-height: 26px;
+    }    
     
     div.form__item button[type='submit']{
         font-size: 30px;
@@ -576,4 +775,16 @@
         position: relative;
         top: 100px;
     }
+}
+
+/* Popup */
+
+div.popup__container p{
+    font-size: 20px;
+    line-height: 25px;
+}
+
+div.popup__container h3.popup__speaker__role{
+    font-size: 23px;
+    line-height: 30px;
 }

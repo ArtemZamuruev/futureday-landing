@@ -52,7 +52,6 @@ $(document).ready(initScenes);
 
 function getBackgroundForSection(sectionSelector){
     var backgroundName = "div.layout__background.-" + sectionSelector.replace("__layout", "");
-    console.log("Background name: "+backgroundName);
     return backgroundName;
 }
 
@@ -73,7 +72,6 @@ function initScenes(){
             offset:         a_offset
         })
         .setTween(getBackgroundForSection(secName), {opacity : 1})
-//         .addIndicators({name : secName})
         .addTo(controller);
         var tmpScene2 = new ScrollMagic.Scene({
             triggerElement: "div."+secName,
