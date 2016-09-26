@@ -20,35 +20,43 @@ $(document).ready(function(){
 var sectionsList = {
     "speakers__layout": {
         prev: "intro__layout",
-        next: "forwho__layout"
+        next: "forwho__layout",
+        rus_name: "Спикеры"
     },
     "forwho__layout" : {
         prev: "speakers__layout",
-        next: "advantages__layout"
+        next: "advantages__layout",
+        rus_name: "Для кого"
     },
     "advantages__layout" : {
         prev: "forwho__layout",
-        next: "shedule__layout"
+        next: "shedule__layout",
+        rus_name: "Что вы получите"
     },
     "shedule__layout" : {
         prev: "advantages__layout",
-        next: "tickets__layout"
+        next: "tickets__layout",
+        rus_name: "Программа"
     },
     "tickets__layout" : {
         prev: "shedule__layout",
-        next: "place__layout"
+        next: "place__layout",
+        rus_name: "Билеты"
     },
     "place__layout" : {
         prev: "tickets__layout",
-        next: "contacts__layout"
+        next: "contacts__layout",
+        rus_name: "Место"
     },
     "contacts__layout" : {
         prev: "place__layout",
-        next: ""
+        next: "",
+        rus_name: "Контакты"
     }
 };
 
 $(document).ready(initScenes);
+$(document).ready(initMobileIndicationScenes);
 
 function getBackgroundForSection(sectionSelector){
     var backgroundName = "div.layout__background.-" + sectionSelector.replace("__layout", "");
@@ -57,9 +65,6 @@ function getBackgroundForSection(sectionSelector){
 
 function initScenes(){
     for (secName in sectionsList){
-        if (secName === "intro__layout"){
-            continue;
-        }
         var a_duration = parseFloat(vh/2.0);
         var a_offset = parseFloat(vh/-4.0);
         
@@ -73,6 +78,7 @@ function initScenes(){
         })
         .setTween(getBackgroundForSection(secName), {opacity : 1})
         .addTo(controller);
+        
         var tmpScene2 = new ScrollMagic.Scene({
             triggerElement: "div."+secName,
             duration:       a_duration,
@@ -81,4 +87,28 @@ function initScenes(){
         .setTween(getBackgroundForSection(sectionsList[secName].prev), {opacity : 0})
         .addTo(controller);
     }
+}
+
+
+function addIndicationScene(trigger, h_block, text){
+    var scene =  new ScrollMagic.Scene({
+        triggerElement: trigger,
+        duration: $(h_block).outerHeight(),
+        offset: 200
+    })
+    .on('enter leave', function(){
+        $("div.current__menu__indicator").text(text);
+    })
+    .addTo(controller); 
+}
+
+function initMobileIndicationScenes(){   
+    addIndicationScene("div.intro__layout", "div.intro", "");
+    addIndicationScene("div.speakers__layout", "div.speakers__layout", "Спикеры");
+    addIndicationScene("div.forwho__layout", "div.forwho__layout", "Для кого");
+    addIndicationScene("div.advantages__layout", "div.advantages__layout", "Что вы получите");
+    addIndicationScene("div.shedule__layout", "div.shedule__layout", "Программа");
+    addIndicationScene("div.tickets__layout", "div.tickets__layout", "Билеты");
+    addIndicationScene("div.place__layout", "div.place__layout", "Место");
+    addIndicationScene("div.contacts__layout", "div.contacts__layout", "Контакты");
 }

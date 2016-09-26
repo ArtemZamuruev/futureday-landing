@@ -5877,7 +5877,7 @@ $(window).on('scroll', function() {
             
             
             
-            $("div.current__menu__indicator").text($("a.menu__link.-js-selected").text());
+//             $("div.current__menu__indicator").text($("a.menu__link.-js-selected").text());
             
             
 
