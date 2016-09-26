@@ -193,7 +193,6 @@ function setSizes(wdth){
         }
     }
     var skr_item_images = $("div.speaker__item div.speaker__image");
-    console.log(skr_item_images);
     for (var i = 1; i < skr_item_images.length; i++){
         var $curImage = skr_item_images[i];
         var newWidth = parseFloat(wdth*props[i].w_per);
