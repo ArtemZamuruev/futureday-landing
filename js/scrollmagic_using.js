@@ -56,7 +56,7 @@ var sectionsList = {
 };
 
 $(document).ready(initScenes);
-$(document).ready(initMobileIndicationScenes);
+$(document).ready(initMenuIndicationScenes);
 
 function getBackgroundForSection(sectionSelector){
     var backgroundName = "div.layout__background.-" + sectionSelector.replace("__layout", "");
@@ -90,25 +90,35 @@ function initScenes(){
 }
 
 
-function addIndicationScene(trigger, h_block, text){
-    var scene =  new ScrollMagic.Scene({
+function addIndicationScene(trigger, h_block, text, menu_index){
+    var mobileIndication =  new ScrollMagic.Scene({
         triggerElement: trigger,
         duration: $(h_block).outerHeight(),
-        offset: 200
+        offset: 100
     })
     .on('enter leave', function(){
         $("div.current__menu__indicator").text(text);
     })
     .addTo(controller); 
+    var desktopIndication = new ScrollMagic.Scene({
+        triggerElement: trigger,
+        duration: $(h_block).outerHeight(),
+        offset: 0
+    })
+    .on('enter leave', function(){
+        $("a.menu__link.-js-selected").removeClass("-js-selected");
+        $("div.menu__item:nth-child("+menu_index+") a.menu__link").addClass("-js-selected");
+    })
+    .addTo(controller);
 }
 
-function initMobileIndicationScenes(){   
-    addIndicationScene("div.intro__layout", "div.intro", "");
-    addIndicationScene("div.speakers__layout", "div.speakers__layout", "Спикеры");
-    addIndicationScene("div.forwho__layout", "div.forwho__layout", "Для кого");
-    addIndicationScene("div.advantages__layout", "div.advantages__layout", "Что вы получите");
-    addIndicationScene("div.shedule__layout", "div.shedule__layout", "Программа");
-    addIndicationScene("div.tickets__layout", "div.tickets__layout", "Билеты");
-    addIndicationScene("div.place__layout", "div.place__layout", "Место");
-    addIndicationScene("div.contacts__layout", "div.contacts__layout", "Контакты");
+function initMenuIndicationScenes(){   
+    addIndicationScene("div.intro__layout", "div.intro", "", -1);
+    addIndicationScene("div.speakers__layout", "div.speakers__layout", "Спикеры", 3);
+    addIndicationScene("div.forwho__layout", "div.forwho__layout", "Для кого", 4);
+    addIndicationScene("div.advantages__layout", "div.advantages__layout", "Что вы получите", 5);
+    addIndicationScene("div.shedule__layout", "div.shedule__layout", "Программа", 6);
+    addIndicationScene("div.tickets__layout", "div.tickets__layout", "Билеты", 7);
+    addIndicationScene("div.place__layout", "div.place__layout", "Место", 8);
+    addIndicationScene("div.contacts__layout", "div.contacts__layout", "Контакты", 9);
 }
