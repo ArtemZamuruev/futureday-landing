@@ -28,7 +28,6 @@ function setTurnedByUserFlag(){
 
 $(document).ready(function(){
     let windowWidth = $(window).width();
-    
     if(windowWidth <= 1024){
         setSizes(windowWidth);
     }
@@ -41,6 +40,18 @@ $(document).ready(function(){
         }
         automattedTurningTimer = setTimeout(tick, 15000);
     }, 15000);
+});
+
+$(window).on("resize", function(){
+    let windowWidth = $(window).width();
+    if(windowWidth<=1024){
+        console.log("Resize less then 1024");
+        setSizes(windowWidth);
+    }
+    else{
+        console.log("Resize more then 1024");
+        setImagesDefaults();
+    }
 });
 
 
@@ -162,6 +173,31 @@ function animateTextIn(item){
     $(item).addClass(TEXT_IN_ANIMATION);
 }
 
+
+function setImagesDefaults(){
+    $("div.speaker__item:nth-child(1) div.speaker__image").css({
+        "width" :   "186px",
+        "height":   "161px"
+    });
+    $("div.speaker__item:nth-child(2) div.speaker__image").css({
+        "width" :   "410px",
+        "height":   "334px"
+    });
+    $("div.speaker__item:nth-child(3) div.speaker__image").css({
+        "width" :   "253px",
+        "height":   "296px"
+    });
+    $("div.speaker__item:nth-child(4) div.speaker__image").css({
+        "width" :   "192px",
+        "height":   "162px"
+    });$("div.speaker__item:nth-child(5) div.speaker__image").css({
+        "width" :   "186px",
+        "height":   "158px"
+    });$("div.speaker__item:nth-child(6) div.speaker__image").css({
+        "width" :   "199px",
+        "height":   "161px"
+    });
+}
 
 
 function setSizes(wdth){
