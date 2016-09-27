@@ -29,7 +29,7 @@ function setTurnedByUserFlag(){
 $(document).ready(function(){
     let windowWidth = $(window).width();
     if(windowWidth <= 1024){
-        setSizes(windowWidth);
+        setSizes(windowWidth, true);
     }
     
     $("div.speaker__item").addClass("-destroyed");
@@ -46,7 +46,7 @@ $(window).on("resize", function(){
     let windowWidth = $(window).width();
     if(windowWidth<=1024){
         console.log("Resize less then 1024");
-        setSizes(windowWidth);
+        setSizes(windowWidth, false);
     }
     else{
         console.log("Resize more then 1024");
@@ -200,7 +200,14 @@ function setImagesDefaults(){
 }
 
 
-function setSizes(wdth){
+function setOffset(){
+//     alert("Set offset! Window width: "+$(window).width()+"; height: "+$(window).height());
+    $("div.speakers__switcher").offset({
+        "left": $("div.speaker__item:nth-child(5) div.speaker__image").offset().left
+    });
+}
+
+function setSizes(wdth, do_set_offset){
     //Make screen-relative sizes of images  
     let props = {
         0: {
@@ -238,7 +245,8 @@ function setSizes(wdth){
             "height": newHeight+"px"
         });
     }
-    $("div.speakers__switcher").offset({
-        "left": $("div.speaker__item:nth-child(5) div.speaker__image").offset().left
-    });
+    
+    if(do_set_offset){
+        setOffset();
+    }
 }

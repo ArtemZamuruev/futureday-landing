@@ -288,6 +288,9 @@
     div.speakers{
         height: 1500px;
     }
+    div.speakers__layout>a{
+        top: -100px;
+    }
     div.speakers__container{
         position: absolute;
         left: initial;
@@ -381,7 +384,9 @@
     div.forwho{
         margin-top: 180px;
     }
-    
+    div.forwho__layout>a{
+        top:-100px!important;
+    }
     div.forwho__label{
         margin-top: 50px;
         font-size: 25px;
@@ -422,6 +427,10 @@
     }
 
 /* Advantages layout */
+    div.advantages__layout>a{
+        top: -80px!important;
+    }
+    
     div.advantages__items > div.advantages__item{
         position: relative;
         left: -52px;
@@ -509,6 +518,7 @@
     
 /* Shedule layout */
     
+    
     div.shedule__header{
         font: 30px/50px kelson;
         font-weight: 400;
@@ -516,6 +526,9 @@
         margin: 0 -5% 0 -5%;
     }
     
+    div.shedule__layout > a{
+        top: 80px!important;
+    }
     div.shedule__icons{
         display: block;
     }

@@ -20,11 +20,14 @@ $("div.mobile__menu__close").on("click", function(){
     }
 });
 
-
-$("div.header__menu div.menu").on("scroll", function(e){
-    if($("div.header__menu div.menu").hasClass("fadeInDown")){
-        e.preventDefault();
+$("div.menu__item a").click(function(){
+    if($(window).width()>1024){
+        return;
     }
+    setTimeout(function(){
+        $("div.header__menu div.menu").removeClass("fadeInDown");
+        $("div.header__menu div.menu").addClass("fadeOutUp");
+    }, 300);
 });
 
 

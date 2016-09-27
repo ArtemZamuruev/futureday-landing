@@ -99,6 +99,7 @@ function addIndicationScene(trigger, h_block, text, menu_index){
     .on('enter leave', function(){
         $("div.current__menu__indicator").text(text);
     })
+//     .addIndicators({name: "Mobile Indicator: "+trigger})
     .addTo(controller); 
     var desktopIndication = new ScrollMagic.Scene({
         triggerElement: trigger,
@@ -109,6 +110,7 @@ function addIndicationScene(trigger, h_block, text, menu_index){
         $("a.menu__link.-js-selected").removeClass("-js-selected");
         $("div.menu__item:nth-child("+menu_index+") a.menu__link").addClass("-js-selected");
     })
+//     .addIndicators({name: "Desktop Indicator: "+trigger})
     .addTo(controller);
 }
 
