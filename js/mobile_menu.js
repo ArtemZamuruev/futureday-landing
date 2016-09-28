@@ -27,6 +27,7 @@ $("div.menu__item a").click(function(){
     setTimeout(function(){
         $("div.header__menu div.menu").removeClass("fadeInDown");
         $("div.header__menu div.menu").addClass("fadeOutUp");
+        $("html,body").css({"overflow":"auto"});
     }, 300);
 });
 

@@ -5757,24 +5757,17 @@ var sliderNext = {
     "edition":"company"
 };
 var $forWho_items = $("div.forwho__main-item");
-$forWho_items.on('click', function() {
-    
+$forWho_items.on('click', function() {    
     //Prevent fucntion if not mobile
     if($(window).width()>=1024){
         console.log("Return on desktops");
         return;
     }
-    
     var $this = $(this),
         currentSliderName = $(this).attr("data-slider-name"),
         $active = $(".-js-active[data-slider-target]"),
         $currentSlide = $(".forwho__main-item.-js-active"),
-        $target = $("[data-slider-name=\"" + sliderNext[currentSliderName] + "\"]");
-//     Debug messages for slider 
-//     
-//     console.log("Current slider name:" + currentSliderName);
-//     console.log("Next slider name:"+sliderNext[currentSliderName]);
-    
+        $target = $("[data-slider-name=\"" + sliderNext[currentSliderName] + "\"]");    
     $currentSlide.removeClass('-js-active');
     $currentSlide.addClass('-js-out');
      $currentSlide.on(transitionEnd, function() {
@@ -5861,40 +5854,6 @@ $items.on('click', function(evt) {
     });
 });
 
-var prevTarget = "";
-
-// $(window).on('scroll', function() {
-//     var currentTop = $(this).scrollTop(),
-//         $blocks = $(".layout__item"),
-//         windowHeight = $(window).height();
-//     $blocks.each(function() { 
-//         if (currentTop+windowHeight*0. >= $(this).offset().top && currentTop+windowHeight*0.7 <= $(this).offset().top+$(this).height()){
-//             var target = $(this).find('a[name]').attr('name'),
-//                 $item = $('a[href="#' + target + '"]'),
-//                 $active = $(".-js-selected");
-//             $active.removeClass('-js-selected');
-//             $item.addClass('-js-selected');
-            
-//         }
-//     });
-// });
-
-
-function mobileMenuIndication(){
-    /* Archie mobile menu indication */
-    var $currentSelectedItemText = $(".menu__link.-js-selected").text();
-    var $menuIndicator = $("div.current__menu__indicator");
-    if($menuIndicator.text() != $currentSelectedItemText){
-        $menuIndicator.removeClass("fadeIn");
-        $menuIndicator.addClass("fadeOut");
-        setTimeout(function(){
-            $menuIndicator.text($currentSelectedItemText);
-            $menuIndicator.removeClass("fadeOut");
-            $menuIndicator.addClass("fadeIn");
-        }, 100);
-    }
-    /* End */
-}
 
 var $form = $("form.form");
 var formSettings = {

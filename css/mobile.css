@@ -185,10 +185,13 @@
         background-size: cover;
     }
     header.header div.mobile__menu__icon{
-        height: 27px;
-        width: 32px;
+        height: 70px;
+        width: 70px;
         top: 65px;
         right: 52px;
+        background-size: 32px 27px;
+        background-repeat: no-repeat;
+        background-position: right top;
     }
     header.header.-js-inner div.mobile__menu__icon{
         top:32px;
@@ -540,7 +543,7 @@
     div.shedule__label{
         margin-top: 30px;
         font-size: 24px;
-        line-height: 22px;
+        line-height: 30px;
     }
     
     div.shedule__icon-wrap:nth-child(1) div.shedule__icon-front svg{
@@ -582,6 +585,15 @@
         width: 100%;
         padding-right: 0;
     }
+    
+    div.shedule__table div.table{
+        font-size: 21px;
+        line-height: 25px;
+    }
+    div.shedule__table div.table div.table__cell{
+        height: 60px;
+    }
+    
 /* Tickets layout */
     
     div.tickets__content {
@@ -669,8 +681,8 @@
     
 /*   Contacts   */
     div.contacts__label{
-        font-size: 21px;
-        line-height: 27px;
+        font-size: 18px;
+        line-height: 22px;
         max-width: 600px;
     }
     
