@@ -592,6 +592,7 @@
     }
     div.shedule__table div.table div.table__cell{
         height: 60px;
+        padding: 6px;
     }
     
 /* Tickets layout */
