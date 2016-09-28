@@ -35,12 +35,12 @@ $(document).on("scroll", function(){
         itemsDestroy("div.speaker__item");
     }    
     //Если секция ЧТО ВЫ ПОЛУЧИТЕ входит во вьюпорт
-    if(doesSectionEnteringViewport("div.advantages__layout", 0.5)){
-        itemsBuild("div.advantages__item");
-    }
-    else{
-        itemsDestroy("div.advantages__item");
-    }
+//     if(doesSectionEnteringViewport("div.advantages__layout", 0.5)){
+//         itemsBuild("div.advantages__item");
+//     }
+//     else{
+//         itemsDestroy("div.advantages__item");
+//     }
 });
 
 function doesSectionEnteringViewport(sectionSelector, enterCoef){
