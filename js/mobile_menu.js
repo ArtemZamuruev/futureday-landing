@@ -7,6 +7,7 @@
 
 $(document).on("click", "div.mobile__menu__icon", function(){
     var $menu = $("div.header__menu div.menu");
+    console.log("click! has class = "+$menu.hasClass("fadeOutUp"));
     $menu.removeClass("fadeOutUp");
     $menu.addClass("fadeInDown");
     $("html,body").css({"overflow":"hidden"});

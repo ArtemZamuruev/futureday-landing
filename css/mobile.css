@@ -22,9 +22,11 @@
     /*  div.layout__header    */
     div.layout__header.-sliced{
         height: 90px;
+        top: 0px;
     }
     div.layout__header{
         height: 70px;
+        top: -200px;
     } 
         /*header.header*/
         header.header.-js-inner{
@@ -164,8 +166,8 @@
         text-transform: uppercase;
         text-align: right;
         font-weight: 400;
-        font-size: 21px;
-        line-height: 25px;
+        font-size: 23px;
+        line-height: 27px;
         top: 63px;
     }
     header.header.-js-inner div.current__menu__indicator{
@@ -682,8 +684,8 @@
     
 /*   Contacts   */
     div.contacts__label{
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 13px;
+        line-height: 17px;
         max-width: 600px;
     }
     
@@ -691,12 +693,12 @@
         display: block;
     }
     div.form__item{
-        width: 400px;
+        width: 500px;
         margin: 20px auto;
         text-align:center;
     }
     div.form__item input[type='text']{
-        width: 400px;
+        width: 500px;
         height: 60px;
         font-size: 24px;
         line-height: 26px;
@@ -751,7 +753,7 @@
     }
     
     div.contacts__add{
-        width:430px;
+        width:450px;
         margin: 52px auto;
         flex-wrap: wrap;
     }
@@ -768,7 +770,7 @@
     
     div.contacts__item--type_mail,
     div.contacts__item--type_phone{
-        font-size: 25px;
+        font-size: 27px;
         line-height: 35px;
     }
 
@@ -813,4 +815,9 @@ div.popup__container p{
 div.popup__container h3.popup__speaker__role{
     font-size: 23px;
     line-height: 30px;
+}
+
+
+div.-none-display{
+    display:none;
 }
