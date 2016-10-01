@@ -1,0 +1,8 @@
+# Create expires headers
+<FilesMatch "\.(ico|jpg|jpeg|png|gif|js|css|swf)$">
+ExpiresActive on
+ExpiresDefault "access plus 30 days"
+Header unset ETag
+FileETag None
+</FilesMatch>
+# End Create expires headers
