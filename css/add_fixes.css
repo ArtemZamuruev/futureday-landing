@@ -232,3 +232,7 @@ div.mobile__menu__close{
 div.mobile__menu__buy{
     display: none;
 }
+
+.overflow_hidden{
+    overflow: hidden;
+}

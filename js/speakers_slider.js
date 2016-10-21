@@ -201,7 +201,6 @@ function setImagesDefaults(){
 
 
 function setOffset(){
-//     alert("Set offset! Window width: "+$(window).width()+"; height: "+$(window).height());
     $("div.speakers__switcher").offset({
         "left": $("div.speaker__item:nth-child(5) div.speaker__image").offset().left
     });
